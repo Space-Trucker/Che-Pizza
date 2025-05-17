@@ -1,7 +1,8 @@
 # capolavoro
-<details>
 
-<summary> CSS links position in Tag head :</summary>
+<details> 
+
+<summary> CSS links - posizione nel Tag Head :</summary>
 
 ### Cosa posizionare per primo, link css di bootstrap o il nostro?
 
