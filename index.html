@@ -1,61 +1,63 @@
 <!DOCTYPE html>
-<!-- Define el tipo de documento como HTML5 -->
-<html lang="en">
-<!-- Inicia el documento HTML con lenguaje inglés -->
+<!-- Dichiarazione del tipo di documento HTML5 -->
+<html lang="it">
+<!-- Inizio documento HTML con lingua italiana -->
 
 <head>
-    <!-- Encabezado del documento - metadatos y recursos -->
+    <!-- Sezione metadati e risorse -->
     <meta charset="UTF-8">
-    <!-- Especifica la codificación de caracteres como UTF-8 -->
+    <!-- Definizione codifica caratteri UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura la vista para dispositivos móviles -->
+    <!-- Configurazione viewport per dispositivi mobili -->
     <title>.:Mamma mia Che Pizza:.</title>
-    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <!-- Titolo della pagina (visibile nella scheda del browser) -->
     
-    <!-- cSS - Bootstrap -->
-    <!-- Enlace a la hoja de estilos de Bootstrap desde CDN -->
+    <!-- CSS - Bootstrap -->
+    <!-- Collegamento al framework Bootstrap CSS tramite CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
           integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     
     <!-- file Style CSS -->
     <!-- Enlace a la hoja de estilos personalizada -->
     <link href="/style/styles.css" rel="stylesheet"> 
+    <!-- CSS personalizzato -->
+    <link href="/style/style.css" rel="stylesheet"> 
 </head>
 
-<!-- Cuerpo del documento con clases de Bootstrap para diseño -->
+<!-- Corpo del documento con classi Bootstrap -->
 <body class="h-100 text-center">
-    <!-- Contenedor principal con clases de Bootstrap para cubrir toda la altura -->
+    <!-- Contenitore principale con layout flex -->
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         
-        <!-- Encabezado de la página -->
+        <!-- Intestazione del sito -->
         <header class="cover-container d-flex w-100 hd-100 p-3 mx-auto flex-column">
-            <!-- Barra de navegación -->
+            <!-- Barra di navigazione principale -->
             <nav class="container">
-                <!-- Lista de navegación con pestañas -->
+                <!-- Menu a schede -->
                 <ul class="nav nav-tabs justify-content-start">
-                    <!-- Elemento de navegación activo (página actual) -->
+                    <!-- Voce di menu attiva (pagina corrente) -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html"><h3>Che Pizza</h3></a>
                     </li>
                     
-                    <!-- Menú desplegable de pizzas -->
+                    <!-- Menu a tendina per le pizze -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                             aria-expanded="false">Menù di Pizze</a>
-                        <!-- Submenú desplegable -->
+                        <!-- Voci del menu a tendina -->
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pages/pizza1.html">pizza 1</a></li> <!-- Pizza Jairo -->
-                            <li><a class="dropdown-item" href="/pages/pizza2.html">pizza 2</a></li> <!-- Pizza David -->
-                            <li><a class="dropdown-item" href="/pages/pizza3.html">pizza 3</a></li> <!-- Pizza Kashif -->
+                            <li><a class="dropdown-item" href="/pages/pizza1.html">pizza 1</a></li> <!-- Collegamento a Pizza 1 -->
+                            <li><a class="dropdown-item" href="/pages/pizza2.html">pizza 2</a></li> <!-- Collegamento a Pizza 2 -->
+                            <li><a class="dropdown-item" href="/pages/pizza3.html">pizza 3</a></li> <!-- Collegamento a Pizza 3 -->
                         </ul>
                     </li>
                     
-                    <!-- Enlace a página de pedidos -->
+                    <!-- Voce per gli ordini -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Ordine</a>
                     </li>
                     
-                    <!-- Enlace a página "Quiénes somos" -->
+                    <!-- Voce "Chi siamo" -->
                     <li class="nav-item">
                         <a class="nav-link" href="chi_siamo.html">Chi siamo</a>
                     </li>
@@ -63,32 +65,32 @@
             </nav>
         </header>
         
-        <!-- Contenido principal de la página -->
+        <!-- Contenuto principale -->
         <main class="px-3">
             <section class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <h1>Index</h1> <!-- Título principal -->
+                <h1>Index</h1> <!-- Titolo principale -->
                 <p class="lead">
-                    <!-- Texto introductorio -->
-                    Cover is a one-page template for building simple and beautiful home pages. Download, edit
-                    the text, and add your own fullscreen background photo to make it your own.
+                    <!-- Testo introduttivo -->
+                    Template per pagine semplici ed eleganti. Personalizza il testo e aggiungi
+                    la tua immagine di sfondo per renderlo unico.
                 </p>
                 <p class="lead">
-                    <!-- Botón de llamada a la acción -->
-                    <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+                    <!-- Bottone call-to-action -->
+                    <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Scopri di più</a>
                 </p>
             </section>
         </main>
         
-        <!-- Pie de página -->
+        <!-- Piè di pagina -->
         <footer class="mt-auto text-black-50 text-dark">
-            <!-- Créditos del template -->
-            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+            <!-- Crediti template -->
+            <p>Template basato su <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, creato da <a
                     href="https://x.com/mdo" class="text-white">@mdo</a>.</p>
         </footer>
     </div>
 
-    <!-- JS - Bootstrap -->
-    <!-- Script de Bootstrap (incluye Popper.js) al final del body para mejor rendimiento -->
+    <!-- JavaScript - Bootstrap -->
+    <!-- Script Bootstrap (incluso Popper) alla fine per migliorare il caricamento -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
