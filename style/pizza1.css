@@ -7,21 +7,10 @@
         margin: 20px;
         padding: 20px;
     }
-}
-
-body {
-    background-image: url('image/fondosito.jpg');
-    background-attachment: fixed; /* Esto hace que el fondo sea fijo */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
 }        
 /* Capa semitransparente para mejor legibilidad */
 .content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.39);
     padding: 20px;
     margin: 50px auto;
     max-width: 800px;

@@ -17,18 +17,18 @@
     <!-- CSS personalizado -->
     <style>
         :root {
-            --primary-color: #e63946;
-            --secondary-color: #f1faee;
-            --dark-color: #1d3557;
-            --light-color: #a8dadc;
-            --text-dark: #2b2d42;
-            --text-light: #f8f9fa;
+             --primary-color: #e63946; /* Colore primario rosso */
+            --secondary-color: #ffffff; /* Colore secondario bianco-verde chiaro */
+            --dark-color: rgb(29, 53, 87); /* Colore scuro (qui bianco) */
+            --light-color: #a8dadc; /* Colore chiaro azzurro */
+            --text-dark: #2b2d42; /* Colore testo scuro */
+            --text-light: #f8f9fa; /* Colore testo chiaro */
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-dark);
-            background-image: url('../image/fondosito.jpg');
+            background-image: url('../image/35788.jpg');
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
@@ -40,7 +40,7 @@
         
         .content-wrapper {
             background-color: transparent;
-            flex: ;
+            flex: 1;
         }
         
         /* Mantenemos el menú original de tu código */
@@ -49,7 +49,7 @@
         }
         
         .nav-tabs {
-            background-color: rgba(29, 53, 87, 0.9);
+            background-color: rgb(29, 53, 87);
             border-radius: 0.25rem;
             padding: 0.5rem;
         }
@@ -103,7 +103,7 @@
         
         .ingredients-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #888181;
         }
         
         .ingredients-list li:last-child {
@@ -112,7 +112,7 @@
         
         .btn-pizza {
             background-color: var(--primary-color);
-            color: white;
+            color: rgba(255, 255, 255, 0.877);
             border: none;
             padding: 0.75rem 1.5rem;
             font-weight: bold;
@@ -121,13 +121,13 @@
         
         .btn-pizza:hover {
             background-color: #c1121f;
-            color: white;
+            color: rgba(255, 255, 255, 0.993);
             transform: scale(1.05);
         }
         
         footer {
             background-color: var(--dark-color);
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 2rem 0;
             margin-top: auto;
         }
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-4 bg-white rounded shadow-sm">
+                        <div class="p-4 bg-white bg-opacity-75 rounded shadow-sm mt-4">
                         <h2 class="mb-4">La Nostra Pizza Bismark</h2>
                         <p class="lead">Quali sono gli ingredienti per fare la pizza?</p>
                         <p>Farina, sale, acqua e lievito: cosa hanno in comune questi semplici ingredienti? Si uniscono per creare la base perfetta per un'ottima pizza. Dai il benvenuto alla nostra ricetta originale per l'impasto della pizza, che entrerà subito a far parte del tuo ricettario di famiglia.</p>
@@ -227,14 +227,14 @@
                         </div>
                         
                         <div class="mt-4">
-                            <h4>Tempo di preparazione:</h4>
+                            <h4>Tempo di attesa alla preparazione:</h4>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%">15 min</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="p-4 bg-white rounded shadow-sm mt-4">
+                    <div class="p-4 bg-white bg-opacity-75 rounded shadow-sm mt-4">
                         <h4><i class="fas fa-info-circle me-2"></i>Curiosità</h4>
                         <p>La Pizza Bismark prende il nome dal famoso cancelliere tedesco Otto von Bismarck, anche se la ricetta è puramente italiana. La particolarità dell'uovo al centro è un omaggio alla tradizione contadina della cucina povera ma ricca di sapore.</p>
                     </div>
@@ -258,7 +258,7 @@
                                     <i class="fas fa-star text-warning"></i>
                                 </div>
                                 <p class="card-text">"La Pizza Bismark è semplicemente fantastica! L'uovo è cotto perfettamente e si amalgama benissimo con gli altri ingredienti."</p>
-                                <p class="text-muted">- Marco R.</p>
+                                <p class="text-muted">- David V.</p>
                             </div>
                         </div>
                     </div>
@@ -288,7 +288,7 @@
                                     <i class="fas fa-star text-warning"></i>
                                 </div>
                                 <p class="card-text">"La migliore pizza che abbia mai mangiato! I funghi sono freschissimi e i piselli aggiungono un tocco dolce perfetto."</p>
-                                <p class="text-muted">- Giovanni T.</p>
+                                <p class="text-muted">- Jairo V.</p>
                             </div>
                         </div>
                     </div>
