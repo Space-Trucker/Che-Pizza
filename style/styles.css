@@ -13,9 +13,45 @@
     /** Fonts */
 }
 
-
 .nav-link{
     color: var(--colr-Oliva);
+}
+
+/* #header-Pizza2{
+    padding: 10%;
+} */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../image/fondosito.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+    .content {
+        margin: 20px;
+        padding: 20px;
+    }
 }
 
 /* #header-Pizza2{
