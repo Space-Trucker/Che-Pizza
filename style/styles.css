@@ -1,7 +1,26 @@
-:root{
+
+/* la root - radice */
+:root{ 
     /** Palette Colori */
+    /* Palette Originale => https://coolors.co/e14212-e7cc99-75351d-a6a434-e7b643-f4e1c9 */
+    /* Palette Finale => https://coolors.co/a6a434-f4e1c9-e14212-e7b643-22162b */
+    --colr-Verde-Basilico: #a6a434; /* Verde - Basilico */
+    --colr-Bianco-Mozzarella: #f4e1c9; /* Bianco - Mozzarella */
+    --colr-Rosso-Pomodoro: #e14212; /* Rosso - Pomodoro */
+    --colr-Giallo-Grana: #e7b643; /* Giallo - Grana */
+    --colr-Arancione-Crosta: #E98433; /* Arancione - Crosta   */
+    --colr-Scuro-Oliva: #22162B; /* Viola - Oliva */
     /** Fonts */
 }
+
+.nav-link{
+    color: var(--colr-Oliva);
+}
+
+/* #header-Pizza2{
+    padding: 10%;
+} */
+
 
 body {
     margin: 0;
@@ -34,3 +53,7 @@ body {
         padding: 20px;
     }
 }
+
+/* #header-Pizza2{
+    padding: 10%;
+} */
