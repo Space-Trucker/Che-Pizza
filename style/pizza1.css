@@ -7,7 +7,7 @@
         margin: 20px;
         padding: 20px;
     }
-}        
+}
 /* Capa semitransparente para mejor legibilidad */
 .content {
     background-color: rgba(255, 255, 255, 0.39);
