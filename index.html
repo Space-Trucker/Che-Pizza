@@ -1,96 +1,527 @@
 <!DOCTYPE html>
 <!-- Dichiarazione del tipo di documento HTML5 -->
 <html lang="it">
-<!-- Inizio documento HTML con lingua italiana -->
+<!-- Inizio documento con lingua italiana -->
 
 <head>
-    <!-- Sezione metadati e risorse -->
+    <!-- Meta tags per la configurazione della pagina -->
     <meta charset="UTF-8">
-    <!-- Definizione codifica caratteri UTF-8 -->
+    <!-- Codifica caratteri UTF-8 per supportare caratteri speciali -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configurazione viewport per dispositivi mobili -->
-    <title>.:Mamma mia Che Pizza:.</title>
-    <!-- Titolo della pagina (visibile nella scheda del browser) -->
+    <!-- Viewport responsive per dispositivi mobili -->
+    <meta name="description" content="Mamma Mia Che Pizza - Auténtica pizza italiana artesanal">
+    <!-- Descrizione per SEO e social media -->
+    <title>Home | Mamma Mia Che Pizza</title>
+    <!-- Titolo della pagina visibile nel browser -->
     
-    <!-- CSS - Bootstrap -->
-    <!-- Collegamento al framework Bootstrap CSS tramite CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
-          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Collegamento a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Framework CSS per il layout responsive -->
     
-    <!-- file Style CSS -->
-    <!-- Enlace a la hoja de estilos personalizada -->
-    <link href="/style/styles.css" rel="stylesheet"> 
-    <!-- CSS personalizzato -->
-    <link href="/style/style.css" rel="stylesheet"> 
+    <!-- Collegamento a Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icone vettoriali per l'interfaccia utente -->
+    
+    <!-- Collegamento a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font personalizzati per il titolo e il testo -->
+    
+    <!-- Stile CSS personalizzato -->
+    <style>
+        /* Variabili CSS per i colori principali */
+        :root {
+            --primary-color: #e63946; /* Rosso pomodoro */
+            --secondary-color: #f1faee; /* Bianco panna */
+            --accent-color: #a8dadc; /* Verde basilico chiaro */
+            --dark-color: #1d3557; /* Blu scuro */
+            --light-color: #f8f9fa; /* Bianco */
+            --text-dark: #2b2d42; /* Testo scuro */
+            --text-light: #f8f9fa; /* Testo chiaro */
+        }
+        
+        /* Stile base del corpo della pagina */
+        body {
+            font-family: 'Raleway', sans-serif; /* Font principale */
+            color: var(--text-dark); /* Colore del testo */
+            background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1681&q=80');
+            background-attachment: fixed; /* Sfondo fisso */
+            background-position: center; /* Centra l'immagine */
+            background-size: cover; /* Copre tutto lo spazio */
+            min-height: 100vh; /* Altezza minima tutta la viewport */
+            display: flex; /* Layout flexbox */
+            flex-direction: column; /* Direzione colonna */
+        }
+        
+        /* Overlay semitrasparente per migliorare la leggibilità */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8); /* Bianco con opacità 80% */
+            min-height: 100vh; /* Copre tutta l'altezza */
+        }
+        
+        /* Stile per il logo/nome del ristorante */
+        .navbar-brand {
+            font-family: 'Pacifico', cursive; /* Font corsivo */
+            font-size: 1.8rem; /* Dimensione grande */
+            color: var(--primary-color) !important; /* Colore rosso */
+        }
+        
+        /* Stile per la barra di navigazione */
+        .nav-tabs {
+            background-color: var(--dark-color); /* Sfondo blu scuro */
+            border-radius: 0.25rem; /* Bordi arrotondati */
+            padding: 0.5rem; /* Spaziatura interna */
+        }
+        
+        /* Stile per i link di navigazione */
+        .nav-link {
+            color: var(--secondary-color) !important; /* Colore testo */
+            font-weight: 600; /* Peso del font */
+            transition: all 0.3s; /* Transizione animata */
+        }
+        
+        /* Effetto hover e stato attivo per i link */
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important; /* Cambia colore */
+            background-color: var(--secondary-color); /* Cambia sfondo */
+            transform: translateY(-2px); /* Leggera animazione */
+        }
+        
+        /* Stile per il menu a tendina */
+        .dropdown-menu {
+            background-color: var(--dark-color); /* Sfondo blu scuro */
+            border: none; /* Rimuove il bordo */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombreggiatura */
+        }
+        
+        /* Stile per le voci del menu a tendina */
+        .dropdown-item {
+            color: var(--secondary-color); /* Colore testo */
+        }
+        
+        /* Effetto hover per le voci del menu */
+        .dropdown-item:hover {
+            background-color: var(--primary-color); /* Cambia sfondo */
+            color: var(--secondary-color); /* Cambia colore testo */
+        }
+        
+        /* Sezione hero con immagine di sfondo */
+        .hero-section {
+            min-height: 60vh; /* Altezza minima */
+            display: flex; /* Layout flexbox */
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra orizzontalmente */
+            text-align: center; /* Allineamento testo */
+            color: white; /* Colore testo */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover; /* Copre tutto lo spazio */
+            background-position: center; /* Centra l'immagine */
+            border-radius: 15px; /* Bordi arrotondati */
+            margin: 2rem 0; /* Margine esterno */
+        }
+        
+        /* Stile per le card delle pizze/servizi */
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.55); /* Sfondo semitrasparente */
+            border: none; /* Nessun bordo */
+            border-radius: 15px; /* Bordi arrotondati */
+            overflow: hidden; /* Nasconde overflow */
+            transition: all 0.3s; /* Transizione animata */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombreggiatura */
+            height: 100%; /* Altezza piena */
+            margin-bottom: 2rem; /* Margine inferiore */
+        }
+        
+        /* Effetto hover per le card */
+        .feature-card:hover {
+            transform: translateY(-10px); /* Sposta verso l'alto */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Ombreggiatura più marcata */
+        }
+        
+        /* Stile per le immagini nelle card */
+        .card-img-top {
+            height: 200px; /* Altezza fissa */
+            object-fit: cover; /* Adatta l'immagine mantenendo proporzioni */
+        }
+        
+        /* Stile per i titoli nelle card */
+        .card-title {
+            color: var(--primary-color); /* Colore rosso */
+            font-weight: 700; /* Peso del font */
+        }
+        
+        /* Stile per i bottoni personalizzati */
+        .btn-pizza {
+            background-color: var(--primary-color); /* Sfondo rosso */
+            color: white; /* Testo bianco */
+            border: none; /* Nessun bordo */
+            padding: 0.8rem 1.5rem; /* Spaziatura interna */
+            font-weight: 600; /* Peso del font */
+            transition: all 0.3s; /* Transizione animata */
+        }
+        
+        /* Effetto hover per i bottoni */
+        .btn-pizza:hover {
+            background-color: #c1121f; /* Rosso più scuro */
+            transform: translateY(-3px); /* Leggera animazione */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Ombreggiatura */
+            color: white; /* Testo bianco */
+        }
+        
+        /* Stile per il footer */
+        footer {
+            background-color: var(--dark-color); /* Sfondo blu scuro */
+            color: white; /* Testo bianco */
+            padding: 2rem 0; /* Spaziatura interna */
+            margin-top: auto; /* Spinge il footer in basso */
+        }
+        
+        /* Stile per le icone social */
+        .social-icons a {
+            color: rgba(255, 255, 255, 0.95); /* Colore bianco */
+            font-size: 1.5rem; /* Dimensione grande */
+            margin: 0 10px; /* Spaziatura tra icone */
+            transition: all 0.3s; /* Transizione animata */
+        }
+        
+        /* Effetto hover per le icone social */
+        .social-icons a:hover {
+            color: var(--accent-color); /* Cambia colore */
+            transform: translateY(-3px); /* Leggera animazione */
+        }
+        
+        /* Stile per le card delle recensioni */
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.95); /* Sfondo semitrasparente */
+            border-radius: 15px; /* Bordi arrotondati */
+            padding: 1.5rem; /* Spaziatura interna */
+            height: 100%; /* Altezza piena */
+        }
+        
+        /* Stile per le stelle delle recensioni */
+        .testimonial-rating {
+            color: #ffc107; /* Colore giallo */
+            margin-bottom: 1rem; /* Margine inferiore */
+        }
+        
+        /* Media query per dispositivi mobili */
+        @media (max-width: 768px) {
+            /* Riduce l'altezza della hero section */
+            .hero-section {
+                min-height: 50vh;
+            }
+            
+            /* Cambia la direzione della navigazione in colonna */
+            .nav-tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
-<!-- Corpo del documento con classi Bootstrap -->
-<body class="h-100 text-center">
-    <!-- Contenitore principale con layout flex -->
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        
-        <!-- Intestazione del sito -->
-        <header class="cover-container d-flex w-100 hd-100 p-3 mx-auto flex-column">
-            <!-- Barra di navigazione principale -->
-            <nav class="container">
-                <!-- Menu a schede -->
-                <ul class="nav nav-tabs justify-content-start">
-                    <!-- Voce di menu attiva (pagina corrente) -->
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html"><h3>Che Pizza</h3></a>
-                    </li>
+<body>
+    <!-- Overlay semitrasparente sopra l'immagine di sfondo -->
+    <div class="overlay">
+        <!-- Contenitore principale -->
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <!-- Intestazione con navigazione -->
+            <header class="cover-container d-flex w-100 hd-100 p-3 mx-auto flex-column">
+                <!-- Barra di navigazione responsive -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <!-- Logo/Nome del ristorante -->
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza
+                        </a>
+                        <!-- Bottone per menu mobile -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Menu di navigazione principale -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="nav nav-tabs justify-content-start ms-auto">
+                                <!-- Voce Home -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="/index.html">Home</a>
+                                </li>
+                                
+                                <!-- Menu a tendina per le pizze -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Le Nostre Pizze</a>
+                                    <ul class="dropdown-menu">
+                                        <!-- Categoria Classiche -->
+                                        <li><h6 class="dropdown-header">Classiche</h6></li>
+                                        <li><a class="dropdown-item" href="/pages/pizza1.html"><i class="fas fa-egg me-2"></i>Bismark</a></li>
+                                        <li><a class="dropdown-item" href="/pages/pizza2.html"><i class="fas fa-anchor me-2"></i>Americana</a></li>
+                                        <li><a class="dropdown-item" href="/pages/pizza3.html"><i class="fas fa-flag me-2"></i>Napoli</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        
+                                        <!-- Categoria Specialità -->
+                                        <li><h6 class="dropdown-header">Specialità</h6></li>
+                                        <li><a class="dropdown-item" href="/pages/quattro_stagioni.html"><i class="fas fa-leaf me-2"></i>Quattro Stagioni</a></li>
+                                        <li><a class="dropdown-item" href="/pages/capricciosa.html"><i class="fas fa-star me-2"></i>Capricciosa</a></li>
+                                        <li><a class="dropdown-item" href="/pages/diavola.html"><i class="fas fa-pepper-hot me-2"></i>Diavola</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        
+                                        <!-- Categoria Gourmet -->
+                                        <li><h6 class="dropdown-header">Gourmet</h6></li>
+                                        <li><a class="dropdown-item" href="/pages/tartufo.html"><i class="fas fa-mushroom me-2"></i>Tartufo e Funghi</a></li>
+                                        <li><a class="dropdown-item" href="/pages/prosciutto_crudo.html"><i class="fas fa-piggy-bank me-2"></i>Prosciutto Crudo</a></li>
+                                        <li><a class="dropdown-item" href="/pages/quattro_formaggi.html"><i class="fas fa-cheese me-2"></i>Quattro Formaggi</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!-- Voci menu aggiuntive -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/antipasti.html">Antipasti</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/bevande.html">Bevande</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/ordina.html"><i class="fas fa-shopping-cart me-2"></i>Ordina Online</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/chi_siamo.html"><i class="fas fa-users me-2"></i>Chi Siamo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Sezione hero principale -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="display-3 fw-bold mb-4">Mamma Mia Che Pizza</h1>
+                <p class="lead fs-3 mb-5">Autentica pizza italiana dal 1985</p>
+                <!-- Bottoni call-to-action -->
+                <a href="/pages/menu_completo.html" class="btn btn-pizza btn-lg px-4 me-2"><i class="fas fa-utensils me-2"></i>Scopri il Menù</a>
+                <a href="/pages/ordina.html" class="btn btn-outline-light btn-lg px-4"><i class="fas fa-motorcycle me-2"></i>Ordina Online</a>
+            </div>
+        </section>
+
+        <!-- Contenuto principale della pagina -->
+        <div class="content-wrapper">
+            <main class="container my-5">
+                <!-- Sezione delle specialità -->
+                <section class="mb-5">
+                    <h2 class="text-center mb-5">Le Nostre Specialità</h2>
+                    <div class="row g-4">
+                        <!-- Card ingredienti freschi -->
+                        <div class="col-md-4">
+                            <div class="feature-card p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-star fa-3x text-warning"></i>
+                                </div>
+                                <h3 class="text-center mb-3">Ingredienti Freschi</h3>
+                                <p class="text-center">Utilizziamo solo ingredienti freschi e di alta qualità, selezionati personalmente dai nostri chef per garantire il massimo del sapore.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card lievitazione naturale -->
+                        <div class="col-md-4">
+                            <div class="feature-card p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-clock fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="text-center mb-3">Lievitazione Naturale</h3>
+                                <p class="text-center">Il nostro impasto viene lasciato lievitare per 48 ore, sviluppando aromi complessi e una consistenza perfetta.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card forno a legna -->
+                        <div class="col-md-4">
+                            <div class="feature-card p-4">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-fire-alt fa-3x text-danger"></i>
+                                </div>
+                                <h3 class="text-center mb-3">Cottura al Forno a Legna</h3>
+                                <p class="text-center">Cuociamo le nostre pizze in forno a legna tradizionale per ottenere quella croccantezza e sapore unici.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sezione pizze in evidenza -->
+                <section class="my-5 py-5">
+                    <h2 class="text-center mb-5">Le Nostre Pizze</h2>
+                    <div class="row g-4">
+                        <!-- Card pizza Margherita -->
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Margherita" class="card-img-top">
+                                <div class="p-4">
+                                    <h3 class="card-title">Margherita</h3>
+                                    <p class="card-text">Pomodoro San Marzano, mozzarella di bufala, basilico fresco e olio EVO.</p>
+                                    <a href="/pages/margherita.html" class="btn btn-pizza w-100">Scopri di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card pizza Diavola -->
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Diavola" class="card-img-top">
+                                <div class="p-4">
+                                    <h3 class="card-title">Diavola</h3>
+                                    <p class="card-text">Pomodoro, mozzarella, salame piccante e peperoncino fresco.</p>
+                                    <a href="/pages/diavola.html" class="btn btn-pizza w-100">Scopri di più</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card pizza Quattro Formaggi -->
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80" alt="Quattro Formaggi" class="card-img-top">
+                                <div class="p-4">
+                                    <h3 class="card-title">Quattro Formaggi</h3>
+                                    <p class="card-text">Mozzarella, gorgonzola, fontina e parmigiano reggiano.</p>
+                                    <a href="/pages/quattro_formaggi.html" class="btn btn-pizza w-100">Scopri di più</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bottone per vedere tutto il menu -->
+                    <div class="text-center mt-4">
+                        <a href="/pages/menu_completo.html" class="btn btn-outline-primary btn-lg">Vedi Tutto il Menù</a>
+                    </div>
+                </section>
+
+                <!-- Sezione recensioni clienti -->
+                <section class="my-5 py-5 bg-light bg-opacity-75 rounded-3">
+                    <div class="container">
+                        <h2 class="text-center mb-5">Cosa Dicono i Nostri Clienti</h2>
+                        <div class="row g-4">
+                            <!-- Recensione 1 -->
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="mb-4">"La migliore pizza che abbia mai mangiato! Gli ingredienti sono freschissimi e l'impasto è perfetto."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="rounded-circle me-3" width="50">
+                                        <div>
+                                            <h6 class="mb-0">Marco R.</h6>
+                                            <small class="text-muted">Cliente abituale</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Recensione 2 -->
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="mb-4">"Servizio eccellente e pizza deliziosa. La crosta è croccante e gli ingredienti di altissima qualità."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="rounded-circle me-3" width="50">
+                                        <div>
+                                            <h6 class="mb-0">Laura B.</h6>
+                                            <small class="text-muted">Prima visita</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Recensione 3 -->
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="mb-4">"Atmosfera autentica e pizza che ricorda quella della nonna. Tornerò sicuramente!"</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente" class="rounded-circle me-3" width="50">
+                                        <div>
+                                            <h6 class="mb-0">Giovanni T.</h6>
+                                            <small class="text-muted">Food Blogger</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer della pagina -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!-- Sezione informazioni -->
+                    <div class="col-md-4 mb-4">
+                        <h5><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</h5>
+                        <p>La vera pizza italiana dal 1985. Tradizione, qualità e passione in ogni pizza.</p>
+                        <div class="social-icons">
+                            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
                     
-                    <!-- Menu a tendina per le pizze -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-expanded="false">Menù di Pizze</a>
-                        <!-- Voci del menu a tendina -->
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pages/pizza1.html">pizza 1</a></li> <!-- Collegamento a Pizza 1 -->
-                            <li><a class="dropdown-item" href="/pages/pizza2.html">pizza 2</a></li> <!-- Collegamento a Pizza 2 -->
-                            <li><a class="dropdown-item" href="/pages/pizza3.html">pizza 3</a></li> <!-- Collegamento a Pizza 3 -->
+                    <!-- Sezione orari e contatti -->
+                    <div class="col-md-4 mb-4">
+                        <h5>Orari di Apertura</h5>
+                        <ul class="list-unstyled">
+                            <li>Lun-Ven: 11:00 - 23:00</li>
+                            <li>Sab-Dom: 11:00 - 24:00</li>
                         </ul>
-                    </li>
+                        <h5 class="mt-3">Contatti</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Via Europa, 123 - Bergamo</p>
+                        <p><i class="fas fa-phone me-2"></i>+39 123 456789</p>
+                        <p><i class="fas fa-envelope me-2"></i>info@chepizza.it</p>
+                    </div>
                     
-                    <!-- Voce per gli ordini -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ordine</a>
-                    </li>
-                    
-                    <!-- Voce "Chi siamo" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="chi_siamo.html">Chi siamo</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        
-        <!-- Contenuto principale -->
-        <main class="px-3">
-            <section class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-                <h1>Index</h1> <!-- Titolo principale -->
-                <p class="lead">
-                    <!-- Testo introduttivo -->
-                    Template per pagine semplici ed eleganti. Personalizza il testo e aggiungi
-                    la tua immagine di sfondo per renderlo unico.
-                </p>
-                <p class="lead">
-                    <!-- Bottone call-to-action -->
-                    <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Scopri di più</a>
-                </p>
-            </section>
-        </main>
-        
-        <!-- Piè di pagina -->
-        <footer class="mt-auto text-black-50 text-dark">
-            <!-- Crediti template -->
-            <p>Template basato su <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, creato da <a
-                    href="https://x.com/mdo" class="text-white">@mdo</a>.</p>
+                    <!-- Sezione newsletter e link legali -->
+                    <div class="col-md-4 mb-4">
+                        <h5>Newsletter</h5>
+                        <p>Iscriviti per ricevere offerte speciali e novità!</p>
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="La tua email" required>
+                                <button class="btn btn-primary" type="submit">Iscriviti</button>
+                            </div>
+                        </form>
+                        <div class="mt-3">
+                            <a href="/pages/privacy.html" class="text-white me-3">Privacy Policy</a>
+                            <a href="/pages/termini.html" class="text-white">Termini e Condizioni</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 bg-light">
+                <div class="text-center">
+                    <p class="mb-0">&copy; 2025 Mamma Mia Che Pizza. Proggeto realizado da studenti 3ias. Tutti i diritti riservati.</p>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <!-- JavaScript - Bootstrap -->
-    <!-- Script Bootstrap (incluso Popper) alla fine per migliorare il caricamento -->
+    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
