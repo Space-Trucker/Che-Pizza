@@ -1,0 +1,22 @@
+@import url(styles.css);
+
+body{
+    background-image: none !important;
+    button{
+        color: var(--colr-Scuro-Oliva) !important;
+    }
+}
+
+#sect-Header-Diavola {
+    div{
+        *{
+            display: inline-flex;
+        }
+        
+    }
+}
+.lead{
+    border: 5px  solid; 
+    border-color: var(--colr-Rosso-Pomodoro);
+    text-align: start;
+}
