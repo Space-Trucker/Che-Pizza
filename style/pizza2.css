@@ -1,6 +1,7 @@
 @import url(styles.css);
 
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: none !important;
     button{
         color: var(--colr-Scuro-Oliva) !important;
@@ -15,8 +16,8 @@ body{
         
     }
 }
-.lead{
+/* .lead{
     border: 5px  solid; 
     border-color: var(--colr-Rosso-Pomodoro);
     text-align: start;
-}
+} */
