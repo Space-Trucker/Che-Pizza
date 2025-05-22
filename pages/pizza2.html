@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,41 +20,39 @@
 </head>
 <body class="h-100 text-center ">
     <header id="header-Pizza2" class="cover-container d-flex w-100 hd-100 p-3 mx-auto flex-column border border-black">
-        <nav class="container ">
-            <ul class="nav nav-tabs d-flex justify-content-center align-items-center">
-                <li class="nav-item "><a class="navbar-brand" href="/index.html"><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tre Pizze</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/pages/pizza1.html">Pizza Bismark</a></li> <!-- Pizza Jairo -->
-                        <li><a class="dropdown-item" href="/pages/pizza2.html">Pizza Diavola</a></li> <!-- Pizza David -->
-                        <li><a class="dropdown-item" href="/pages/pizza3.html">Pizza Napoletana</a></li> <!-- Pizza Kashif -->
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="/pages/ordina.html">Ordine</a></li>
-                <li class="nav-item"><a class="nav-link" href="/pages/chi-siamo.html">Chi siamo</a></li>
-            </ul>
+        <nav class="container-fluid nav nav-tabs d-flex justify-content-center align-items-center sticky-top py-2 mx-2">
+            <li><a class="nav-item navbar-brand" href="/index.html"><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tre Pizze</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pages/pizza1.html">Pizza Bismark</a></li> <!-- Pizza Jairo -->
+                    <li><a class="dropdown-item" href="/pages/pizza2.html">Pizza Diavola</a></li> <!-- Pizza David -->
+                    <li><a class="dropdown-item" href="/pages/pizza3.html">Pizza Napoletana</a></li> <!-- Pizza Kashif -->
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/pages/ordina.html">Ordine</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages/chi-siamo.html">Chi siamo</a></li>
         </nav>
-        <!--  -->
+
         <section id="sect-Header-Diavola" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <!-- tags -->
             <div class="container">
                 <span class="col">
                     <h3>Pizza</h3>
                 </span>
-                <div class="col">
+                <div class="col section-tag" >
                     <span class=""><a href=""># tag</a></span>
                     <span class=""><a href=""># tag</a></span>
                     <span class=""><a href=""># tag</a></span>
                 </div>
             </div>
             <!-- H1 - sottotitolo -->
+            <div>
+                <h1>DIAVOLA</h1>
+                <button type="button" class="btn btn-outline-light">🛵</button>
+                <button type="button" class="btn btn-outline-light">🛒</button>
+            </div>
             <hgroup>
-                <div>
-                    <h1>DIAVOLA</h1>
-                    <button type="button" class="btn btn-outline-light">🛵</button>
-                    <button type="button" class="btn btn-outline-light">AGGIUNGI AL CARRELLO</button>
-                </div>
                 <!-- ORDINA / AGGIUNGI AL CARRELLO -->
                 <p class="lead">
                     Scegli questa questa pizza per gustarla oggi stesso.<br />
@@ -86,11 +83,34 @@
             <button type="button" class="btn btn-outline-light">PREPARA E NOSTRE PIZZE</button>.
         </section>
     </header>
-    <div style="height: 150px;"></div><!-- Rimuovere -->
+    <!-- <div style="height: 150px;"></div>Rimuovere -->
     <!-- Main -->
     <main class="px-3">
         <!-- INGREDIENTI -->
         <section>
+            <!-- 
+                Gli ingredienti principali per realizzare la pizza diavola sono:
+                Pasta per pizza (farina 00, acqua, lievito di birra fresco o lievito madre, zucchero, sale, olio extravergine d'oliva)
+                Passata di pomodoro
+                Mozzarella (tagliata a cubetti o fette)
+                Salamino piccante (a fettine sottili)
+                Origano
+                Olio extravergine d'oliva
+                Sale
+            ------------------>
+            <!---
+                In alcune varianti si aggiungono anche peperoni a fettine piccole, olive nere, e olio piccante o tabasco per un gusto più deciso.
+                Riassumendo, la ricetta classica prevede:
+                400-500 g di pasta per pizza
+                400 g di passata di pomodoro
+                250 g di mozzarella
+                150 g di salamino piccante
+                Origano q.b.
+                Olio extravergine d'oliva q.b.
+                Sale q.b.
+                Questi ingredienti sono combinati per ottenere una pizza dal sapore piccante e deciso, tipica della tradizione italiana. 
+            ------------------>
+            <!--  -->
             <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, deserunt 
             <button type="button" class="btn btn-outline-light">INGREDIENTI</button>,
             quisquam harum repellendus quae necessitatibus. -->
@@ -113,10 +133,7 @@
         </section>
 
         <!-- DA RIMUOVERE - - - Sezione per dare spessore  -->
-        <section style="height: 600px;">
-            
-
-        </section>
+        <section style="height: 600px;"></section>
     </main>
     <!-- Main -->
     <footer class="mt-auto text-white-50">

@@ -6,18 +6,21 @@ body{
     button{
         color: var(--colr-Scuro-Oliva) !important;
     }
+    /* header, main{
+        max-width: ;
+    } */
 }
 
 #sect-Header-Diavola {
+    width: 100dvh;
     div{
         *{
             display: inline-flex;
         }
-        
     }
 }
-/* .lead{
+.lead{
     border: 5px  solid; 
     border-color: var(--colr-Rosso-Pomodoro);
     text-align: start;
-} */
+}
