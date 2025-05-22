@@ -1,17 +1,203 @@
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-    .content {
-        margin: 20px;
-        padding: 20px;
-    }
+@import url(styles.css);
+
+        /* Variabili CSS per i colori principali */
+        :root {
+            --primary-color: #e63946;
+            /* Rosso pomodoro */
+            --secondary-color: #f1faee;
+            /* Bianco panna */
+            --accent-color: #a8dadc;
+            /* Verde basilico chiaro */
+            --dark-color: #1d3557;
+            /* Blu scuro */
+            --light-color: #f8f9fa;
+            /* Bianco */
+            --text-dark: #2b2d42;
+            /* Testo scuro */
+            --text-light: #f8f9fa;
+            /* Testo chiaro */
+        }
+
+        /* Stile base del corpo della pagina */
+        body {
+            font-family: 'Raleway', sans-serif;
+            /* Font principale */
+            color: var(--text-dark);
+            /* Colore del testo */
+            background-image: url("../image/pizza3.jpg");
+            background-attachment: fixed;
+            /* Sfondo fisso */
+            background-position: center;
+            /* Centra l'immagine */
+            background-size: cover;
+            /* Copre tutto lo spazio */
+            min-height: 100vh;
+            /* Altezza minima tutta la viewport */
+            display: flex;
+            /* Layout flexbox */
+            flex-direction: column;
+            /* Direzione colonna */
+        }
+
+        .nav {
+            --bs-nav-link-padding-x: 0 rem;
+        }
+
+        /* Stile per la barra di navigazione */
+        .nav-tabs {
+            background-color: var(--secondary-color);
+            /* Sfondo blu scuro */
+            border-radius: 0.25rem;
+            /* Bordi arrotondati */
+            padding: 0.5rem;
+            /* Spaziatura interna */
+            margin-left: auto;
+        }
+
+        /* Stile per i link di navigazione */
+        .nav-link {
+            color: var(--primary-color) !important;
+            /* Colore testo */
+            font-weight: 600;
+            /* Peso del font */
+            transition: all 0.3s;
+            /* Transizione animata */
+        }
+
+        /* Effetto hover e stato attivo per i link */
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            /* Cambia colore */
+            background-color: var(--secondary-color);
+            /* Cambia sfondo */
+            transform: translateY(-2px);
+            /* Leggera animazione */
+        }
+
+        /* Stile per il menu a tendina */
+        .dropdown-menu {
+            background-color: var(--dark-color);
+            /* Sfondo blu scuro */
+            border: none;
+            /* Rimuove il bordo */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            /* Ombreggiatura */
+        }
+
+        /* Stile per le voci del menu a tendina */
+        .dropdown-item {
+            color: var(--secondary-color);
+            /* Colore testo */
+        }
+
+        /* Effetto hover per le voci del menu */
+        .dropdown-item:hover {
+            background-color: var(--primary-color);
+            /* Cambia sfondo */
+            color: var(--secondary-color);
+            /* Cambia colore testo */
+        }
+
+        /* Media query per dispositivi mobili */
+        @media (max-width: 768px) {
+
+            /* Riduce l'altezza della hero section */
+            .hero-section {
+                min-height: 50vh;
+            }
+
+            /* Cambia la direzione della navigazione in colonna */
+            .nav-tabs {
+                flex-direction: column;
+            }
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+        }
+
+        .hero-content {
+            flex-direction: row;
+            align-items: center;
+            width: 40rem;
+            height: 20rem;
+        }
+
+        /* Resize images */
+.hero-content img {
+    width: 80%;
+    height: auto;
 }
-/* Capa semitransparente para mejor legibilidad */
-.content {
-    background-color: rgba(255, 255, 255, 0.39);
-    padding: 20px;
-    margin: 50px auto;
-    max-width: 800px;
-    border-radius: 10px;
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 0;
 }
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/disciplinare_avpn_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  text-align: center;
+  height: 300px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.item:not(:last-child) {
+  margin-right: 100px;
+}
+.item::before {
+  position: absolute;
+  content: "";
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background-image: linear-gradient(312.25deg, #FFC4BC 0%,     rgba(255, 255, 255, 0) 66.19%);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.inner {
+  background-color: #fff;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  box-shadow: 0 40px 80px #FBE4E0;
+  border-radius: 14px;
+}
+
+.name {
+  font-size: 48px;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
