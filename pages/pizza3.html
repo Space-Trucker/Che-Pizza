@@ -56,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart me-2"></i>Ordine</a>
+                    <a class="nav-link" href="/pages/ordina.html"><i class="fas fa-shopping-cart me-2"></i>Ordine</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="chi_siamo.html"><i class="fas fa-users me-2"></i>Chi
@@ -66,43 +66,156 @@
         </nav>
     </header>
 
-    <div class="carousel rounded-box">
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Burger" />
+ 
+
+ <!-- Pizza Hero Section -->
+    <section class="pizza-hero text-center">
+        <div class="container">
+            <h1 id="h1_napoletana" class="display-2 mb-4">
+                <i class="fas fa-crown me-3"></i>Pizza Napoletana
+            </h1>
+            <p class="lead fs-4">La Regina delle Pizze - Patrimonio UNESCO dell'Umanità</p>
+            <div class="price-tag mt-4">
+                €10.50
+            </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Burger" />
-        </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Burger" />
-        </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" alt="Burger" />
-        </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Burger" />
-        </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Burger" />
-        </div>
-        <div class="carousel-item">
-            <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" alt="Burger" />
+    </section>
+
+
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Pizza Description -->
+            <div class="col-lg-8">
+                <div class="card pizza-card mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4">
+                          <span style="font-size: 1.2em;">🇮🇹</span></i> La Storia
+                        </h2>
+                        <p class="card-text fs-5">
+                            La Pizza Napoletana è la madre di tutte le pizze, nata nelle strade di Napoli nel XVIII secolo. 
+                            Questa pizza rappresenta la semplicità e la perfezione della tradizione culinaria italiana, 
+                            riconosciuta dall'UNESCO come Patrimonio Culturale Immateriale dell'Umanità nel 2017.
+                        </p>
+                        <p class="card-text">
+                            La nostra Pizza Napoletana è preparata seguendo la ricetta tradizionale: 
+                            impasto a lunga lievitazione (24-48 ore), pomodori San Marzano DOP, 
+                            mozzarella di bufala campana DOP, basilico fresco e olio extravergine d'oliva.
+                        </p>
+                        
+                        <div class="fun-fact">
+                            <h5><i class="fas fa-lightbulb text-warning me-2"></i>Lo sapevi che...</h5>
+                            <p class="mb-0">La Pizza Napoletana deve essere cotta in forno a legna a 485°C per soli 60-90 secondi! 
+                            Il risultato è una pizza dal cornicione alto e soffice, con il centro morbido e i caratteristici "leopard spots" sulla base.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingredients Section -->
+                <div class="card pizza-card">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4">
+                            <i class="fas fa-leaf text-success me-2"></i>Ingredienti Autentici
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Base:</h5>
+                                <span class="ingredient-badge">Farina tipo 00</span>
+                                <span class="ingredient-badge">Acqua</span>
+                                <span class="ingredient-badge">Sale marino</span>
+                                <span class="ingredient-badge">Lievito di birra</span>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Condimenti:</h5>
+                                <span class="ingredient-badge">Pomodori San Marzano DOP</span>
+                                <span class="ingredient-badge">Mozzarella di Bufala DOP</span>
+                                <span class="ingredient-badge">Basilico fresco</span>
+                                <span class="ingredient-badge">Olio EVO</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Valori Nutrizionali (per pizza):</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-fire text-warning me-2"></i>Calorie: ~800 kcal</li>
+                                <li><i class="fas fa-dna text-info me-2"></i>Proteine: 35g</li>
+                                <li><i class="fas fa-bread-slice text-secondary me-2"></i>Carboidrati: 85g</li>
+                                <li><i class="fas fa-tint text-primary me-2"></i>Grassi: 30g</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Order Card -->
+                <div class="card pizza-card mb-4 position-relative z-index: 1">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Ordina Subito!</h4>
+                        <div class="price-tag mb-3">€180.50</div>
+                        <button class="btn btn-success btn-lg w-100 mb-3">
+                            <i class="fas fa-cart-plus me-2"></i>Aggiungi al Carrello
+                        </button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary">
+                                <i class="fas fa-heart me-2"></i>Aggiungi ai Preferiti
+                            </button>
+                            <button class="btn btn-outline-info">
+                                <i class="fas fa-share me-2"></i>Condividi
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="card pizza-card mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">
+                            <i class="fas fa-info-circle text-info me-2"></i>Informazioni
+                        </h5>
+                        <ul class="list-unstyled" >
+                            <li><i class="fas fa-clock text-warning me-2"></i>Tempo preparazione: 3-5 min</li>
+                            <li><i class="fas fa-thermometer-half text-danger me-2"></i>Servita bollente</li>
+                            <li><i class="fas fa-users text-primary me-2"></i>Porzioni: 1-2 persone</li>
+                            <li><i class="fas fa-pepper-hot text-success me-2"></i>Piccantezza: Delicata</li>
+                            <li><i class="fas fa-certificate text-warning me-2"></i>Certificazione: STG</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Allergens Card -->
+                <div class="card pizza-card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">
+                            <i class="fas fa-exclamation-triangle text-warning me-2"></i>Allergeni
+                        </h5>
+                        <div class="alert alert-warning">
+                            <strong>Contiene:</strong> Glutine, Lattosio
+                        </div>
+                        <div class="alert alert-success">
+                            <strong>Non contiene:</strong> Uova, Frutta a guscio, Soia
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Sezione hero principale -->
 
-      <section class="hero">
-    <!-- Content of the hero section -->
-    <div class="hero-content">
-      <!-- Main headline of the hero section -->
-      <h1>The Best Burger in Town</h1>
-      <!-- Subheading text -->
-      <p>Delicious, juicy, and made with love. Taste the difference.</p>
-      <!-- Call-to-action button to encourage users to take action (e.g., order now) -->
-      <a href="#" class="cta-btn">Order Now</a>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Mamma Mia Che Pizza. Tutti i diritti riservati.</p>
+            <p>
+                <i class="fas fa-phone me-2"></i>+39 123 456 7890 |
+                <i class="fas fa-envelope me-2 ms-3"></i>info@mammamia.pizza |
+                <i class="fab fa-instagram me-2 ms-3"></i>@mammamiachecpizza
+            </p>
+        </div>
+    </footer>
+
 
 
 
