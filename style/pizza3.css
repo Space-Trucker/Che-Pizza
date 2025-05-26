@@ -16,6 +16,9 @@
             /* Testo scuro */
             --text-light: #f8f9fa;
             /* Testo chiaro */
+                /* fonts */
+            --font-titoli: 'Pacifico', cursive;
+            --font-tutto-altro: 'Raleway', sans-serif;
         }
 
         /* Stile base del corpo della pagina */
@@ -38,20 +41,35 @@
             flex-direction: column;
             /* Direzione colonna */
         }
+        body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/pizza3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px); /* Adjust blur amount */
+    z-index: -1;
+}
 
         .nav {
-            --bs-nav-link-padding-x: 0 rem;
+            --bs-nav-link-padding-x: 2rem;
         }
 
         /* Stile per la barra di navigazione */
         .nav-tabs {
             background-color: var(--secondary-color);
             /* Sfondo blu scuro */
-            border-radius: 0.25rem;
+            border-radius: 76.25rem;
             /* Bordi arrotondati */
-            padding: 0.5rem;
+            padding: .5rem;
             /* Spaziatura interna */
             margin-left: auto;
+            
         }
 
         /* Stile per i link di navigazione */
@@ -62,17 +80,20 @@
             /* Peso del font */
             transition: all 0.3s;
             /* Transizione animata */
+            
         }
 
         /* Effetto hover e stato attivo per i link */
         .nav-link:hover,
         .nav-link.active {
+            border-radius: 76.25rem;
             color: var(--primary-color) !important;
             /* Cambia colore */
             background-color: var(--secondary-color);
             /* Cambia sfondo */
             transform: translateY(-2px);
-            /* Leggera animazione */
+            /* Leggera animazione */        
+            background-color: var(--secondary-colorth );
         }
 
         /* Stile per il menu a tendina */
@@ -112,80 +133,69 @@
                 flex-direction: column;
             }
         }
-
-        .hero {
-            background-color: var(--secondary-color);
+        
+        .pizza-hero {
+            color: var(--secondary-color);
+            margin-top: 8rem;
+        
         }
 
-        .hero-content {
-            flex-direction: row;
-            align-items: center;
-            width: 40rem;
-            height: 20rem;
+        .pizza-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .pizza-card:hover {
+            transform: translateY(-5px);
+        }
+        .ingredient-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin: 0.2rem;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .price-tag {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        .fun-fact {
+            background: #f8f9fa;
+            border-left: 5px solid #ff6b6b;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+ 
+        h1, h2, h3 {
+            font-family: 'Pacifico', cursive;
         }
 
-        /* Resize images */
-.hero-content img {
-    width: 80%;
-    height: auto;
-}
+        #h1_napoletana{
+            font-size: 6rem;
+            font-weight:bold;
+            text-shadow: 6px 6px 6px var(--primary-color);
 
-.wrapper {
-  box-sizing: border-box;
-  padding: 50px;
-  margin: 0;
-}
+        }
 
-.items {
-  display: flex;
-  justify-content: center;
-}
+        .pizza-hero>.container>p{
 
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../image/disciplinare_avpn_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 300px;
-  text-align: center;
-  height: 300px;
-  border-radius: 30px;
-  position: relative;
-}
+            text-shadow: 6px 6px 6px var(--dark-color);
+        }
 
-.item:not(:last-child) {
-  margin-right: 100px;
-}
-.item::before {
-  position: absolute;
-  content: "";
-  top: -4px;
-  bottom: -4px;
-  left: -4px;
-  right: -4px;
-  background-image: linear-gradient(312.25deg, #FFC4BC 0%,     rgba(255, 255, 255, 0) 66.19%);
-  z-index: -1;
-  border-radius: 30px;
-}
-
-.inner {
-  background-color: #fff;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 250px;
-  box-shadow: 0 40px 80px #FBE4E0;
-  border-radius: 14px;
-}
-
-.name {
-  font-size: 48px;
-  margin: 0;
-}
-
+        .pizza-card>.card-body>ul{
+            li{
+                i{width: 20px; margin-right: 10px;}
+                
+            }
+        }
 
 
 
