@@ -40,18 +40,19 @@
         }
 
         .nav {
-            --bs-nav-link-padding-x: 0 rem;
+            --bs-nav-link-padding-x: 2rem;
         }
 
         /* Stile per la barra di navigazione */
         .nav-tabs {
             background-color: var(--secondary-color);
             /* Sfondo blu scuro */
-            border-radius: 0.25rem;
+            border-radius: 76.25rem;
             /* Bordi arrotondati */
-            padding: 0.5rem;
+            padding: .5rem;
             /* Spaziatura interna */
             margin-left: auto;
+            
         }
 
         /* Stile per i link di navigazione */
@@ -62,17 +63,20 @@
             /* Peso del font */
             transition: all 0.3s;
             /* Transizione animata */
+            
         }
 
         /* Effetto hover e stato attivo per i link */
         .nav-link:hover,
         .nav-link.active {
+            border-radius: 76.25rem;
             color: var(--primary-color) !important;
             /* Cambia colore */
             background-color: var(--secondary-color);
             /* Cambia sfondo */
             transform: translateY(-2px);
-            /* Leggera animazione */
+            /* Leggera animazione */        
+            background-color: var(--secondary-colorth );
         }
 
         /* Stile per il menu a tendina */
@@ -115,6 +119,9 @@
 
         .hero {
             background-color: var(--secondary-color);
+            padding-left: 80px;
+            align-self: center;
+            border-radius: 2rem;
         }
 
         .hero-content {
@@ -153,6 +160,7 @@
   height: 300px;
   border-radius: 30px;
   position: relative;
+  
 }
 
 .item:not(:last-child) {
@@ -185,6 +193,7 @@
   font-size: 48px;
   margin: 0;
 }
+
 
 
 
