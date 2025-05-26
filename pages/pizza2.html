@@ -18,79 +18,88 @@
     <link href="/style/styles.css" rel="stylesheet"> 
 </head>
 <body class="h-100 text-start ">
-    <header id="header-Pizza2" class="cover-container d-flex w-100 hd-100 p-3 mx-auto flex-column">
-        <nav class="container-fluid nav nav-tabs d-flex justify-content-center align-items-center sticky-top py-1">
+    <header id="header-Pizza-Diavola" class="container d-flex w-100   flex-column">
+        <!-- Navbar nel Header-->
+        <nav class="container-fluid nav nav-tabs d-flex justify-content-center align-items-center fixed-top py-1">
             <li>
                 <a class="nav-item navbar-brand" href="/index.html"><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tre Pizze</a>
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Le Nostre Pizze</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/pages/pizza1.html">Pizza Bismark</a></li> <!-- Pizza Jairo -->
                     <li><a class="dropdown-item" href="/pages/pizza2.html">Pizza Diavola</a></li> <!-- Pizza David -->
                     <li><a class="dropdown-item" href="/pages/pizza3.html">Pizza Napoletana</a></li> <!-- Pizza Kashif -->
                 </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/pages/ordina.html">Ordine</a></li>
-            <li class="nav-item"><a class="nav-link" href="/pages/chi-siamo.html">Chi siamo</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages/antipasti.html">Antipasti</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages/bevande.html">Bevande</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages/ordina.html"><i class="fas fa-shopping-cart me-2"></i>Ordina Online</a></li>
+            <li class="nav-item"><a class="nav-link" href="/pages/chi-siamo.html"><i class="fas fa-users me-2"></i>Chi Siamo</a></li>
         </nav>
-
-        <section id="sect-Header-Diavola" class="cover-container d-flex w-100 h-100 p-3 flex-column">
-            <!-- tags -->
-            <div class="row">
-                <span class="col-1">
-                    <h3>Pizza</h3>
-                </span>
-                <div class="col-5 section-tag" >
-                    <span class=""><a href=""># tag</a></span>
-                    <span class=""><a href=""># tag</a></span>
-                    <span class=""><a href=""># tag</a></span>
+        <main class="main-Header-Diavola">
+            <!-- "Body" del Header -->
+            <section id="sect-Header-Diavola" class="cover-container d-flex w-100 h-100 flex-column p-0">
+                <!-- tags -->
+                <div class="row">
+                    <span class="col-1">
+                        <h3>Pizza</h3>
+                    </span>
+                    <div class="col-5 section-tag" >
+                        <span class=""><a href=""># tag</a></span>
+                        <span class=""><a href=""># tag</a></span>
+                        <span class=""><a href=""># tag</a></span>
+                    </div>
                 </div>
-            </div>
-            <!-- H1 - sottotitolo -->
-            <div class="row">
-                <h1 class="col-5">DIAVOLA</h1>
-                <div class="col  row-cols-1"> <!--- d-flex align-content-around flex-wrap   -->
-                    <button type="button" class="btn btn-outline-light col-2">🛵</button>
-                    <button type="button" class="btn btn-outline-light col-2">🛒</button>
+                <!-- H1 - sottotitolo -->
+                <div class="row">
+                    <h1 class="col-8">DIAVOLA</h1>
+                    <div class="col-1 d-flex flex-column justify-content-evenly align-items-center "> <!--- d-flex align-content-around flex-wrap   -->
+                        <button type="button" class="btn btn-outline-primary">
+                            <a href="/index.html#le-Nostre-Pizze" class="nav-link">MENÙ</a>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            <a class="nav-link" href="/pages/ordina.html">Ordina <br/> Online</a>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <hgroup id="" class="text-start ">
-                <!-- ORDINA / AGGIUNGI AL CARRELLO -->
-                <p class="p-header">
-                    Scegli questa questa pizza per gustarla oggi stesso.<br />
-                    <button id="ordina" type="button" class="btn btn-outline-light border-1">ORDINA</button> la Pizza Diavola se sei anima infiammata delle feste. <br />
-                    <button type="button" class="btn btn-outline-light border-1">AGGIUNGI AL CARRELLO</button> per ordinare e condividi il tuo piacere del piccante della Campania.
-                </p>
-                <!-- INGREDIENTI -->
-                <p class="p-header">
-                    Devi sapere che ogni nostra pizza è speciale. Per la loro realizzazione occupiamo materie prime di fornitori e produttori selezionati. <br />
-                    Guarda quali <button type="button" class="btn btn-outline-light">INGREDIENTI</button> ci sono nella tua pizza preferita.
-                </p>
-                <!-- PREPARA E NOSTRE PIZZE -->
-                <p class="p-header">
-                    Vieni a trovarci, e <button type="button" class="btn btn-outline-light">PREPARA LE NOSTRE PIZZE</button> per poterle fare a casa la tua pizza prefereità. 
-                </p>
-                <!-- CURIOSITÀ -->
-                <p class="p-header">
-                    Vuoi conoscere qualcosa in più sul tuo gusto preferito?<br />
-                    Scopri le <button type="button" class="btn btn-outline-light">CURIOSITÀ</button> che si nascondono dentro il cartone della tua pizza.
-                </p>
-                <!-- Bottoni -->
-                <p class="p-header" id="nav-bottoni">
-                    <button type="button" class="btn btn-outline-light">INGREDIENTI</button>
-                    <button type="button" class="btn btn-outline-light">CURIOSITÀ</button>
-                    <button type="button" class="btn btn-outline-light">PREPARA E NOSTRE PIZZE</button>.
-                </p>
-            </hgroup>
-        </section>
-        
+                <hgroup id="" class="">
+                    <!-- ORDINA / AGGIUNGI AL CARRELLO -->
+                    <p class="sect-header">
+                        Scegli questa questa pizza per gustarla oggi stesso.<br />
+                        <button id="ordina" type="button" class="btn btn-outline-light border-1">ORDINA</button> la Pizza Diavola se sei anima infiammata delle feste. <br />
+                        Clicca <button type="button" class="btn btn-outline-light border-1">AGGIUNGI AL CARRELLO</button> per inserire nella lista e condividi il tuo piacere del piccante della Campania.
+                    </p>
+                    <!-- INGREDIENTI -->
+                    <p class="sect-header">
+                        Devi sapere che ogni nostra pizza è speciale. Per la loro realizzazione occupiamo materie prime di fornitori e produttori selezionati. <br />
+                        Guarda quali <button type="button" class="btn btn-outline-light">INGREDIENTI</button> ci sono nella tua pizza preferita.
+                    </p>
+                    <!-- PREPARA E NOSTRE PIZZE -->
+                    <p class="sect-header">
+                        Vieni a trovarci, e impare come si <button type="button" class="btn btn-outline-light">PREPARA LE NOSTRE PIZZE</button> per fare a casa la tua pizza prefereità. 
+                    </p>
+                    <!-- CURIOSITÀ -->
+                    <p class="sect-header">
+                        Vuoi conoscere qualcosa in più sul tuo gusto preferito?<br />
+                        Scopri le <button type="button" class="btn btn-outline-light">CURIOSITÀ</button> che si nascondono dentro il cartone della tua pizza.
+                    </p>
+                    
+                </hgroup>
+            </section>
+            <!-- Footer Header - Bottoni -->
+            <footer class="sect-header" id="nav-bottoni">
+                <button type="button" class="btn btn-outline-light">INGREDIENTI</button>
+                <button type="button" class="btn btn-outline-light">CURIOSITÀ</button>
+                <button type="button" class="btn btn-outline-light">PREPARA E NOSTRE PIZZE</button>.
+            </footer>
+        </main>
     </header>
     
     <!-- Main -->
-    <main class="px-3">
+    <main id="main-Pizza-Diavola" class="container d-flex w-100 p-5 mx-auto flex-column">
         <!-- INGREDIENTI -->
-        <section>
+        <section class="">
             <h2>Sezione INGREDIENTI</h2>
             <p>
                 Gli ingredienti principali per realizzare la pizza diavola sono:
@@ -102,7 +111,7 @@
                 Olio extravergine d'oliva
                 Sale
             </p>
-            
+            <img src="../image/pizzaDiavola/fettaPizza-Diavola.webp" style="transform: rotate(90deg); object-fit: contain;" alt="fetta di pizza diavola ">
             <p>
                 In alcune varianti si aggiungono anche peperoni a fettine piccole, olive nere, e olio piccante o tabasco per un gusto più deciso.
                 Riassumendo, la ricetta classica prevede:
@@ -140,7 +149,7 @@
         </section>
 
         <!--- DA RIMUOVERE - - - Sezione per attivare lo scroll --->
-        <section style="height: 600px;"></section>
+        <div style="height: 600px;"></div>
     </main>
     <!-- Footer -->
     <footer class="mt-auto text-white-50">
