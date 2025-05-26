@@ -20,6 +20,7 @@ body{
     line-height: 1.6;    
     padding: 2rem;
 
+
     background-image: url("/image/Forno/fornoLegn-pizza.webp") !important;
     /* background-repeat: no-repeat; */
     /* background-size: contain; */
@@ -36,17 +37,15 @@ body{
 #header-Pizza-Diavola{
     width: 100dvw;
     height: 100dvh;
-    color: var(--colr-Bianco-Mozzarella);
+    color: var(--colr-Scuro-Oliva);
+    
     /* border: 5px  solid var(--colr-Bianco-Mozzarella);  */
-    background-color: color-mix(in srgb, var(--colr-Giallo-Grana), transparent 50%);
+    main, footer{
+        background-color: color-mix(in srgb, var(--colr-Giallo-Grana), transparent 40%);
+    }
 }
+
 #sect-Header-Diavola {
-    /* width: 100dvh; */
-    /* div{
-        *{
-            display: inline-flex;
-        }
-    } */
     .main-Header-Diavola{
         height: wrap;
         padding: 0;
@@ -64,6 +63,9 @@ h1 {
     /* border: 5px  solid var(--colr-Rosso-Pomodoro);  */
     /* font-family: ; */
 /* } */
-/* #main-Pizza-Diavola{
-
-} */
+#main-Pizza-Diavola{
+    border:  10px;
+    border-style: dashed;
+    border-color: var(--colr-Verde-Basilico);
+    background-color: color-mix(in srgb, var(--colr-Bianco-Mozzarella), transparent 67.5%);
+}
