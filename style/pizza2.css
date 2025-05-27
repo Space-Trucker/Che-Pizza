@@ -11,13 +11,16 @@
     /* fonts */
     --font-titoli: 'Pacifico', cursive;
     --font-tutto-altro: 'Raleway', sans-serif;
+
+    /* for border */
+    --border-dashed-mozzarella: 7.5px dashed var(--colr-Bianco-Mozzarella);
 }
 
 body{
     font-family: var(--font-tutto-altro);
     
-    font-size: 16px;
-    line-height: 1.6;    
+    /* font-size: 16px; */
+    /* line-height: 1.6;     */
     background-image: url("../image/Forno/fornoLegn-pizza.webp") !important;
     button{
         color: var(--colr-Scuro-Oliva) !important;
@@ -30,35 +33,45 @@ body{
 }
 
 #header-Pizza-Diavola{
-    
-    color: var(--colr-Scuro-Oliva);
-    
+    width: 100vw;
+    height: 90vh;
+    nav, main, footer{ 
+        border:  var(--border-dashed-mozzarella);
+        border-radius: 20px;
+    }
     nav{
+        top: 20px;
         background-color: var(--colr-Verde-Basilico);
-        
-        border-style: dashed;
+        *{
+            color: var(--colr-Scuro-Oliva) !important;
+        }
+        li:first{
+            font-size: 10px;
+        }
+        li:hover{
+            background-color: var(--colr-Arancione-Crosta);
+        }
+        .dropdown-menu{
+            background-color: var(--colr-Verde-Basilico);
+            :hover{
+                background-color: var(--colr-Arancione-Crosta);
+            }
+        }
     }
-    /* border: 5px  solid var(--colr-Bianco-Mozzarella);  */
     main{
-        background-color: color-mix(in srgb, var(--colr-Giallo-Grana) 30%, transparent 30%);
-        /* background-color: color-mix(in srgb, color percentage,  percentage); */
-
-        /* background: rgba(255, 255, 255, 0.2); */
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+        /* per Blur sfondo */
+        background-color: color-mix(in srgb, var(--colr-Giallo-Grana) 35%, transparent 40%);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(5px);
+        /* p{
+            font-size: ;
+        } */
+    }
+    footer{
+        margin-top: 20px;
     }
 }
 
-#sect-Header-Diavola {
-    .main-Header-Diavola{
-        height: wrap;
-        padding: 0;
-        margin: 0;
-    }
-}
 h1 {
     font-family: var(--font-titoli);
     font-size: 8rem;
