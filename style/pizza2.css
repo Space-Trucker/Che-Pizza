@@ -21,7 +21,7 @@ body{
     padding: 2rem;
 
 
-    background-image: url("/image/Forno/fornoLegn-pizza.webp") !important;
+    background-image: url("../image/Forno/fornoLegn-pizza.webp") !important;
     /* background-repeat: no-repeat; */
     /* background-size: contain; */
     button{
