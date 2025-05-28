@@ -21,28 +21,27 @@
             --font-tutto-altro: 'Raleway', sans-serif;
         }
 
+        /* Prevent any horizontal scroll globally */
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         /* Stile base del corpo della pagina */
         body {
             font-family: 'Raleway', sans-serif;
-            /* Font principale */
             color: var(--text-dark);
-            /* Colore del testo */
-            
-            background-attachment: fixed;
-            /* Sfondo fisso */
-            background-position: center;
-            /* Centra l'immagine */
-            background-size: cover;
-            /* Copre tutto lo spazio */
+            background-color: #1d3557; /* Fallback color */
             min-height: 100vh;
-            /* Altezza minima tutta la viewport */
             display: flex;
-            /* Layout flexbox */
             flex-direction: column;
-            /* Direzione colonna */
-            overflow-x: hidden
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
         }
-            body::before {
+        
+        /* Create a full-screen blurred background */
+        body::before {
             content: '';
             position: fixed;
             top: -20px;
@@ -60,6 +59,31 @@
             z-index: -1;
         }
 
+        /* Fix container overflow and prevent horizontal scroll */
+        .container {
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            overflow-x: hidden;
+        }
+
+        /* Ensure all elements stay within viewport */
+        * {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Fix row overflow */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .col, .col-lg-4, .col-lg-8, .col-md-6 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
         .nav {
             --bs-nav-link-padding-x: 2rem;
         }
@@ -73,7 +97,6 @@
             padding: .5rem;
             /* Spaziatura interna */
             margin-left: auto;
-            
         }
 
         /* Stile per i link di navigazione */
@@ -84,7 +107,6 @@
             /* Peso del font */
             transition: all 0.3s;
             /* Transizione animata */
-            
         }
 
         /* Effetto hover e stato attivo per i link */
@@ -102,17 +124,17 @@
 
         /* Stile per il menu a tendina */
         .dropdown-menu {
-            background-color: var(--secondary-color);
+            background-color: var(--dark-color);
             /* Sfondo blu scuro */
             border: none;
             /* Rimuove il bordo */
-            box-shadow: 0 5px 15px var(--primary-color)
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             /* Ombreggiatura */
         }
 
         /* Stile per le voci del menu a tendina */
         .dropdown-item {
-            color: var(--primary-color);
+            color: var(--secondary-color);
             /* Colore testo */
         }
 
@@ -124,24 +146,9 @@
             /* Cambia colore testo */
         }
 
-        /* Media query per dispositivi mobili */
-        @media (max-width: 768px) {
-
-            /* Riduce l'altezza della hero section */
-            .hero-section {
-                min-height: 50vh;
-            }
-
-            /* Cambia la direzione della navigazione in colonna */
-            .nav-tabs {
-                flex-direction: column;
-            }
-        }
-        
         .pizza-hero {
             color: var(--secondary-color);
             margin-top: 8rem;
-        
         }
 
         .pizza-card {
@@ -150,9 +157,11 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
+        
         .pizza-card:hover {
             transform: translateY(-5px);
         }
+        
         .ingredient-badge {
             background: #ff6b6b;
             color: white;
@@ -162,6 +171,7 @@
             display: inline-block;
             font-size: 0.9rem;
         }
+        
         .price-tag {
             background: var(--primary-color);
             color: var(--secondary-color);
@@ -171,6 +181,7 @@
             border-radius: 50px;
             display: inline-block;
         }
+        
         .fun-fact {
             background: #f8f9fa;
             border-left: 5px solid #ff6b6b;
@@ -184,30 +195,22 @@
 
         #h1_napoletana{
             font-size: 6rem;
-            font-weight:bold;
+            font-weight: bold;
             text-shadow: 6px 6px 6px var(--primary-color);
-
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
-        .pizza-hero>.container>p{
-
+        .pizza-hero > .container > p {
             text-shadow: 6px 6px 6px var(--dark-color);
         }
 
-        .pizza-card>.card-body>ul{
-            li{
-                i{width: 20px; margin-right: 10px;}
-                
-            }
+        .pizza-card > .card-body > ul li i {
+            width: 20px; 
+            margin-right: 10px;
         }
 
-                    .container {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-
-                /* Media queries for better mobile responsiveness */
+        /* Media queries for better mobile responsiveness */
         @media (max-width: 768px) {
             /* Fix navigation for mobile */
             .nav-tabs {
@@ -270,17 +273,37 @@
                 margin-bottom: 2rem !important;
             }
 
-            /* Fix background attachment on mobile */
+            /* Fix background attachment on mobile and ensure full coverage */
             body::before {
                 background-attachment: scroll;
+                position: fixed;
+                top: -50px;
+                left: -50px;
+                right: -50px;
+                bottom: -50px;
+                width: calc(100vw + 100px);
+                height: calc(100vh + 100px);
+                background-size: cover;
+                background-position: center;
+                filter: blur(3px);
+                z-index: -1;
             }
             
             body {
                 background-attachment: scroll;
+                position: relative;
+                overflow: hidden;
             }
-        }    
 
-         @media (max-width: 576px) {
+            /* Ensure html also prevents overflow */
+            html {
+                overflow-x: hidden;
+                position: relative;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 576px) {
             #h1_napoletana {
                 font-size: 2rem !important;
                 text-shadow: 2px 2px 2px var(--primary-color);
