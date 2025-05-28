@@ -22,33 +22,31 @@
 </head>
 
 <body class="text-start">
-    <header id="header-Pizza-Diavola" class="container-fluid d-flex w-100 flex-column justify-content-center">
+    <header id="header-Pizza-Diavola" class="container-fluid d-flex w-100 flex-column justify-content-center ">
         <!-- Navbar nel Header-->
-        <nav class="container nav d-flex justify-content-center align-items-center fixed-top ">
+        <nav class="container nav d-flex justify-content-evenly align-items-center fixed-top ">
             <li>
                 <a class="nav-item navbar-brand" href="../index.html"><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Le Nostre Pizze</a>
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tre Pizze</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="../pages/pizza1.html">Pizza Bismark</a></li> <!-- Pizza Jairo -->
                     <li><a class="dropdown-item" href="../pages/pizza2.html">Pizza Diavola</a></li> <!-- Pizza David -->
                     <li><a class="dropdown-item" href="../pages/pizza3.html">Pizza Napoletana</a></li><!-- Pizza Kashif -->
                 </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="../pages/ordina.html"><i
-                        class="fas fa-shopping-cart me-2"></i>Ordina Online</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/chi-siamo.html"><i class="fas fa-users me-2"></i>Chi
-                    Siamo</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/ordina.html"><i class="fas fa-shopping-cart me-2"></i>Ordina Online</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/chi-siamo.html"><i class="fas fa-users me-2"></i>Chi Siamo</a></li>
         </nav>
         <main class="main-Header-Diavola container ">
             <!-- "Body" del Header -->
-            <section id="sect-Header-Diavola w-100" class="cover-container d-flex w-100 h-100 flex-column p-0">
+            <section id="sect-Header-Diavola w-100" class="cover-container d-flex w-100 flex-column">
                 <!-- tags -->
                 <div class="row">
-                    <span class="col-1">
+                    <div class="col-1">
                         <h3>Pizza</h3>
-                    </span>
+                    </div>
                     <div class="col-5 section-tag">
                         <span class=""><a href=""># tag</a></span>
                         <span class=""><a href=""># tag</a></span>
@@ -57,41 +55,39 @@
                 </div>
                 <!-- H1 - sottotitolo -->
                 <div class="row">
-                    <h1 class="col-8">DIAVOLA</h1>
+                    <h1 class="col-8 text-wrap">DIAVOLA</h1>
                     <div class="col-1 d-flex flex-column justify-content-evenly align-items-center ">
-                        <!--- d-flex align-content-around flex-wrap   -->
                         <button type="button" class="btn btn-outline-primary">
                             <a href="../index.html#le-Nostre-Pizze" class="nav-link">MENÙ</a>
                         </button>
                         <button type="button" class="btn btn-outline-primary">
-                            <a class="nav-link" href="../pages/ordina.html">Ordina <br /> Online</a>
+                            <a class="nav-link" href="../pages/ordina.html">Ordina</a>
                         </button>
                     </div>
                 </div>
+            </section>
+            <section>
                 <hgroup id="" class="">
                     <!-- INGREDIENTI -->
                     <p class="sect-header">
-                        Devi sapere che ogni nostra pizza è speciale. Per la loro realizzazione occupiamo materie prime
-                        di fornitori e produttori selezionati. <br />
-                        Guarda quali <button type="button" class="btn btn-outline-light"><a href="..pages/pizza2.html#ingredienti">INGREDIENTI</a></button> ci sono
-                        nella tua pizza preferita.
+                        Devi sapere che ogni nostra pizza è speciale. Per la loro realizzazione occupiamo materie prime di fornitori e produttori selezionati. <br />
+                        Guarda quali <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#ingredienti">INGREDIENTI</a></button> ci sono nella tua pizza preferita.
                     </p>
                     <!-- PREPARA E NOSTRE PIZZE -->
                     <p class="sect-header">
-                        Vieni a trovarci, e impare come si <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button> per fare a casa la tua pizza prefereità.
+                        Vieni a trovarci, e impare come si <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button> per fare a casa la tua pizza prefereità.
                     </p>
                     <!-- CURIOSITÀ -->
                     <p class="sect-header">
                         Vuoi conoscere qualcosa in più sul tuo gusto preferito?<br />
-                        Scopri le <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#curiosità">CURIOSITÀ</a></button> che si
-                        nascondono dentro il cartone della tua pizza.
+                        Scopri le <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#curiosità">CURIOSITÀ</a></button> che si nascondono dentro il cartone della tua pizza.
                     </p>
 
                 </hgroup>
             </section>
         </main>
         <!-- Footer Header - Bottoni -->
-        <footer class="container sect-header " id="nav-bottoni">
+        <footer class="container sect-header" id="nav-bottoni">
             <button type="button" class="btn btn-outline-light"><a href="..pages/pizza2.html#ingredienti">INGREDIENTI</a></button>
             <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#curiosità">CURIOSITÀ</a></button>
             <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button>
@@ -99,76 +95,93 @@
     </header>
 
     <!-- Main -->
-    <main id="main-Pizza-Diavola" class="container d-flex w-100 p-5 mx-auto flex-column">
+    <main id="main-Pizza-Diavola" class="container d-flex w-100  flex-column">
         <!-- INGREDIENTI -->
         <section id="ingredienti" class="">
-            <h2>INGREDIENTI</h2>
-            <p>
-                Gli ingredienti principali per realizzare la pizza diavola sono:
-                Pasta per pizza (farina 00, acqua, lievito di birra fresco o lievito madre, zucchero, sale, olio
-                extravergine d'oliva)
-                Passata di pomodoro
-                Mozzarella (tagliata a cubetti o fette)
-                Salamino piccante (a fettine sottili)
-                Origano
-                Olio extravergine d'oliva
-                Sale
-            </p>
-            <img src="../image/pizzaDiavola/fettaPizza-Diavola.webp" alt="fetta di pizza diavola ">
-            <p>
-                In alcune varianti si aggiungono anche peperoni a fettine piccole, olive nere, e olio piccante o tabasco
-                per un gusto più deciso.
-                Riassumendo, la ricetta classica prevede:
-                400-500 g di pasta per pizza <br />
-                400 g di passata di pomodoro<br />
-                250 g di mozzarella<br />
-                150 g di salamino piccante<br />
-                Origano q.b.<br />
-                Olio extravergine d'oliva q.b.<br />
-                Sale q.b.<br />
-                Questi ingredienti sono combinati per ottenere una pizza dal sapore piccante e deciso, tipica della
-                tradizione italiana.
-            </p>
-            <p>
-                Vieni ed assaggia il prodotto del nostro lavoro !
-                <button type="button" class="btn btn-outline-light border-1"><a href="#ordina"
-                        class="">ORDINA</a></button>
-            </p>
+            <hgroup>
+                <h2>INGREDIENTI</h2>
+                <p>La nostra Pizza Diavola è preparata con ingredienti selezionati per garantire il massimo sapore e qualità:</p>
+            </hgroup>
+            <!-- lista ingredienti -->
+            <span>
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, deserunt
-            <button type="button" class="btn btn-outline-light">INGREDIENTI</button>,
-            quisquam harum repellendus quae necessitatibus.
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Ingredienti Principali:</h4>
+                        <ul>
+                            <li><strong>Impasto:</strong> Farina 00, acqua, lievito madre, sale, olio extravergine d'oliva</li>
+                            <li><strong>Base:</strong> Passata di pomodoro San Marzano</li>
+                            <li><strong>Mozzarella:</strong> Fior di latte fresco a cubetti</li>
+                            <li><strong>Salamino piccante:</strong> A fettine sottili</li>
+                            <li><strong>Origano:</strong> Siciliano essiccato</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <h4>Ingredienti Extra (su richiesta):</h4>
+                        <ul>
+                            <li>Peperoni freschi a fettine</li>
+                            <li>Olive nere denocciolate</li>
+                            <li>Olio piccante o tabasco</li>
+                            <li>Peperoncino fresco</li>
+                        </ul>
+                        
+                        <img src="../image/pizzaDiavola/fettaPizza-Diavola.webp" class="img-fluid rounded mt-3" alt="Fetta di pizza diavola">
+                    </div>
+                </div>
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h5>Ricetta Classica (per 1 pizza):</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li>• 400g di impasto</li>
+                                <li>• 150g di passata di pomodoro</li>
+                                <li>• 200g di mozzarella</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li>• 100g di salamino piccante</li>
+                                <li>• Origano q.b.</li>
+                                <li>• Olio extravergine q.b.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <p class="mt-4 text-center">
+                    <strong>Vieni ad assaggiare il prodotto del nostro lavoro artigianale!</strong><br>
+                    <button type="button" class="btn btn-danger btn-lg mt-2">
+                        <a href="#ordina" class="text-white text-decoration-none">
+                            <i class="fas fa-cart-plus me-2"></i>ORDINA ORA
+                        </a>
+                    </button>
+                </p>
 
+            </span>
+
+            
         </section>
         <!-- CURIOSITÀ -->
         <section id="curiosità">
-            <h2>Sezione CURIOSITÀ</h2>
-            Curiosità sulla Diavola
-            Storia
-            La Pizza Diavola nasce negli anni '60 come variante piccante della classica Margherita. Il nome deriva dal
-            colore rosso intenso del salame piccante che ricorda le fiamme dell'inferno.
-
-            Nel Mondo
-            Conosciuta internazionalmente come "Pepperoni Pizza", la Diavola è una delle pizze più ordinate al mondo,
-            seconda solo alla Margherita per popolarità.
-
-            Il Piccante
-            La capsaicina presente nel salame piccante non solo dona sapore, ma stimola anche il rilascio di endorfine,
-            creando una piacevole sensazione di benessere.
-
-            Benefici
-            Il peperoncino accelera il metabolismo e ha proprietà antiossidanti. Una pizza piccante può bruciare fino a
-            50 calorie in più!
+            <h2>CURIOSITÀ sulla Diavola</h2>
+            <p><strong>Storia:</strong> La Pizza Diavola nasce negli anni '60 come variante piccante della Margherita. Il nome deriva dal colore rosso del salame che ricorda le fiamme "infernali".</p>
+            
+            <p><strong>Nel Mondo:</strong> Conosciuta come "Pepperoni Pizza", è la seconda pizza più ordinata al mondo dopo la Margherita.</p>
+        
+            <p><strong>Il Piccante:</strong> La capsaicina del salame stimola il rilascio di endorfine, creando benessere naturale.</p>
+            
+            <p><strong>Benefici:</strong> Il peperoncino accelera il metabolismo e ha proprietà antiossidanti. Una pizza piccante brucia fino a 50 calorie in più!</p>
             <button type="button" class="btn btn-outline-light"><a href="#ordina" class="">CURIOSITÀ</a></button>.
         </section>
         <!-- PREPARA E NOSTRE PIZZE -->
         <section id="prepara-pizze">
             <h2>PREPARA E NOSTRE PIZZE</h2>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis eos repellat minus exercitationem? Eum ex
-            natus reprehenderit, officiis adipisci obcaecati magnam culpa eius incidunt accusamus dolores quibusdam
-            voluptatum laboriosam. Necessitatibus!
-            <button type="button" class="btn btn-outline-light"><a href="#ordina" class="">PREPARA E NOSTRE
-                    PIZZE</a></button>.
+            <p>
+                Porta tutta la famiglia nella nostra pizzeria per imparare l'arte della pizza autentica!<br>
+                I nostri maestri pizzaioli ti insegneranno tutti i trucchi per preparare la pizza perfetta a casa.
+            </p>
+            <button type="button" class="btn btn-outline-light"><a href="#ordina" class="">PREPARA E NOSTRE PIZZE</a></button>.
         </section>
     </main>
     <!-- Footer -->
