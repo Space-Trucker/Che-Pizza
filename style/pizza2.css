@@ -18,29 +18,30 @@
 
 body{
     font-family: var(--font-tutto-altro);
-    
-    /* font-size: 16px; */
-    /* line-height: 1.6;     */
     background-image: url("../image/Forno/fornoLegn-pizza.webp") !important;
     button{
         color: var(--colr-Scuro-Oliva) !important;
     }
 }
-
-.btn{
+p{
+    margin-block: 1rem;
+    margin-block: 1lh;
+}
+/* .btn{
     border-color: var(--colr-Bianco-Mozzarella) !important;
     color: var(--colr-Bianco-Mozzarella);
-}
+} */
 
+/* Header */
 #header-Pizza-Diavola{
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     nav, main, footer{ 
         border:  var(--border-dashed-mozzarella);
         border-radius: 20px;
     }
     nav{
-        top: 20px;
+        top: 15px;
         background-color: var(--colr-Verde-Basilico);
         *{
             color: var(--colr-Scuro-Oliva) !important;
@@ -63,9 +64,9 @@ body{
         background-color: color-mix(in srgb, var(--colr-Giallo-Grana) 35%, transparent 40%);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(5px);
-        /* p{
-            font-size: ;
-        } */
+        p{
+            font-size: 14px;
+        }
     }
     footer{
         margin-top: 20px;
@@ -79,7 +80,7 @@ h1 {
     text-shadow: 6px 6px 6px var(--colr-Bianco-Mozzarella);
     /* margin-bottom: 1rem; */
 }
-
+/* Main */
 #main-Pizza-Diavola{
     border:  10px;
     border-style: dashed;
