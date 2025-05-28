@@ -27,6 +27,7 @@
             /* Font principale */
             color: var(--text-dark);
             /* Colore del testo */
+            
             background-attachment: fixed;
             /* Sfondo fisso */
             background-position: center;
