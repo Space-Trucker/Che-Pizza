@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Diavola</title>
-
     <!-- Collegamento a Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Collegamento a Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS - Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <!-- file Style CSS - del foglio -->
     <link href="../style/pizza2.css" rel="stylesheet">
     <!-- file Style CSS -->
@@ -22,11 +19,11 @@
 </head>
 
 <body class="text-start">
-    <header id="header-Pizza-Diavola" class="container-fluid d-flex w-100 flex-column justify-content-center ">
-        <!-- Navbar nel Header-->
-        <nav class="container nav d-flex justify-content-evenly align-items-center fixed-top ">
+    <header id="header-Pizza-Diavola" class="container w-100 d-flex flex-column justify-content-evenly align-items-center">
+        <!-- Navbar Header-->
+        <nav id="navbar-Header-Diavola" class="container w-100 nav navbar d-flex justify-content-evenly align-items-center fixed-top ">
             <li>
-                <a class="nav-item navbar-brand" href="../index.html"><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</a>
+                <a class="nav-item navbar-brand" href="../index.html"><i class="fas fa-pizza-slice me-2"></i>Che Pizza</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tre Pizze</a>
@@ -39,153 +36,155 @@
             <li class="nav-item"><a class="nav-link" href="../pages/ordina.html"><i class="fas fa-shopping-cart me-2"></i>Ordina Online</a></li>
             <li class="nav-item"><a class="nav-link" href="../pages/chi-siamo.html"><i class="fas fa-users me-2"></i>Chi Siamo</a></li>
         </nav>
-        <main class="main-Header-Diavola container ">
-            <!-- "Body" del Header -->
-            <section id="sect-Header-Diavola w-100" class="cover-container d-flex w-100 flex-column">
+        <!-- main Header - "Body" del Header - con h1 e tags -->
+        <main id="main-Header-Diavola" class="row container d-flex text-center p-2">
+            <!-- H1 -->
+            <h1 class="order-2">DIAVOLA</h1>
+            <!-- tags -->
+            <div class="col d-flex order-1 justify-content-between align-items-center ">
+                <!-- tipo -->
+                <h4 class="col-1 offset-1 h-100 d-flex justify-content-center align-items-center">Pizza</h4>
                 <!-- tags -->
-                <div class="row">
-                    <div class="col-1">
-                        <h3>Pizza</h3>
-                    </div>
-                    <div class="col-5 section-tag">
-                        <span class=""><a href=""># tag</a></span>
-                        <span class=""><a href=""># tag</a></span>
-                        <span class=""><a href=""># tag</a></span>
-                    </div>
+                <div class="col flex-row justify-content-evenly">
+                    <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#ingredienti"># <i class="fa-solid fa-pizza-slice"></i> PIZZA</a></button>
+                    <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#ingredienti"># <i class="fa-solid fa-pepper-hot"></i> piccante</a></button>
+                    <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#ingredienti"># <i class="fa-solid fa-fire"></i> calda</a></button>
                 </div>
-                <!-- H1 - sottotitolo -->
-                <div class="row">
-                    <h1 class="col-8 text-wrap">DIAVOLA</h1>
-                    <div class="col-1 d-flex flex-column justify-content-evenly align-items-center ">
-                        <button type="button" class="btn btn-outline-primary">
-                            <a href="../index.html#le-Nostre-Pizze" class="nav-link">MENÙ</a>
-                        </button>
-                        <button type="button" class="btn btn-outline-primary">
-                            <a class="nav-link" href="../pages/ordina.html">Ordina</a>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <hgroup id="" class="">
-                    <!-- INGREDIENTI -->
-                    <p class="sect-header">
-                        Devi sapere che ogni nostra pizza è speciale. Per la loro realizzazione occupiamo materie prime di fornitori e produttori selezionati. <br />
-                        Guarda quali <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#ingredienti">INGREDIENTI</a></button> ci sono nella tua pizza preferita.
-                    </p>
-                    <!-- PREPARA E NOSTRE PIZZE -->
-                    <p class="sect-header">
-                        Vieni a trovarci, e impare come si <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button> per fare a casa la tua pizza prefereità.
-                    </p>
-                    <!-- CURIOSITÀ -->
-                    <p class="sect-header">
-                        Vuoi conoscere qualcosa in più sul tuo gusto preferito?<br />
-                        Scopri le <button type="button" class="btn btn-outline-light"><a href="/pages/pizza2.html#curiosità">CURIOSITÀ</a></button> che si nascondono dentro il cartone della tua pizza.
-                    </p>
-
-                </hgroup>
-            </section>
+            </div>
+            <!-- Footer Header - Bottoni -->
+            <footer class="col d-flex order-3 justify-content-evenly">
+                <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#ingredienti">INGREDIENTI</a></button>
+                <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#curiosità">CURIOSITÀ</a></button>
+                <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button>
+            </footer>
         </main>
-        <!-- Footer Header - Bottoni -->
-        <footer class="container sect-header" id="nav-bottoni">
-            <button type="button" class="btn btn-outline-light"><a href="..pages/pizza2.html#ingredienti">INGREDIENTI</a></button>
-            <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#curiosità">CURIOSITÀ</a></button>
-            <button type="button" class="btn btn-outline-light"><a href="../pages/pizza2.html#prepara-pizze">PREPARA LE NOSTRE PIZZE</a></button>
-        </footer>
     </header>
 
     <!-- Main -->
     <main id="main-Pizza-Diavola" class="container d-flex w-100  flex-column">
         <!-- INGREDIENTI -->
-        <section id="ingredienti" class="">
-            <hgroup>
-                <h2>INGREDIENTI</h2>
-                <p>La nostra Pizza Diavola è preparata con ingredienti selezionati per garantire il massimo sapore e qualità:</p>
-            </hgroup>
-            <!-- lista ingredienti -->
-            <span>
+        <section id="ingredienti" class="py-5 container">
+            <div class="container">
+                <h3 class="text-center mb-5 display-5 fw-bold text-success">
+                    <i class="fas fa-leaf me-3"></i>I NOSTRI INGREDIENTI
+                </h3>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>Ingredienti Principali:</h4>
-                        <ul>
-                            <li><strong>Impasto:</strong> Farina 00, acqua, lievito madre, sale, olio extravergine d'oliva</li>
-                            <li><strong>Base:</strong> Passata di pomodoro San Marzano</li>
-                            <li><strong>Mozzarella:</strong> Fior di latte fresco a cubetti</li>
-                            <li><strong>Salamino piccante:</strong> A fettine sottili</li>
-                            <li><strong>Origano:</strong> Siciliano essiccato</li>
-                        </ul>
+                <div class="row align-items-center"> 
+                    <p class="lead text-center text-lg-start mb-4">
+                        La nostra Pizza Diavola è preparata con ingredienti selezionati per garantire il massimo sapore e dalla massima qualità. Scopri da dove proviene ogni squisita parte!
+                    </p>
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="pizza-fetta-container position-relative mx-auto" style="max-width: 500px;">
+                            <img src="../image/pizzaDiavola/fetta-Pizza-Diavola.webp" class="img-fluid rounded-4 shadow-lg" alt="Fetta di pizza diavola">
+
+                            <span class="ingredient-marker marker-1" data-ingredient="impasto">0</span>
+                            <span class="ingredient-marker marker-2" data-ingredient="pomodoro">1</span>
+                            <span class="ingredient-marker marker-3" data-ingredient="mozzarella">2</span>
+                            <span class="ingredient-marker marker-4" data-ingredient="salamino">3</span>
+                            <span class="ingredient-marker marker-5" data-ingredient="origano">4</span>
+                            </div>
                     </div>
-                    
-                    <div class="col-md-6">
-                        <h4>Ingredienti Extra (su richiesta):</h4>
-                        <ul>
+
+                    <div class="col-lg-6">
+                        <h4 class="fw-bold mb-3 text-dark">Ingredienti Principali:</h4>
+                        <ul class="list-unstyled ingredients-list">
+                            <li data-marker="marker-1"><strong>0. Impasto 400g:</strong> Farina 00, acqua, lievito madre, sale, olio extravergine d'oliva q.b.</li>
+                            <li data-marker="marker-2"><strong>1. Base:</strong> Passata di pomodoro 150g</li>
+                            <li data-marker="marker-3"><strong>2. Mozzarella 200g:</strong> Fior di latte fresco a cubetti</li>
+                            <li data-marker="marker-4"><strong>3. Salamino piccante 100g:</strong> A fettine sottili</li>
+                            <li data-marker="marker-5"><strong>4. Origano q.b.:</strong> Siciliano essiccato</li>
+                        </ul>
+
+                        <h4 class="fw-bold mt-4 mb-3 text-dark">Ingredienti Extra (su richiesta):</h4>
+                        <ul class="list-unstyled">
                             <li>Peperoni freschi a fettine</li>
                             <li>Olive nere denocciolate</li>
                             <li>Olio piccante o tabasco</li>
                             <li>Peperoncino fresco</li>
                         </ul>
-                        
-                        <img src="../image/pizzaDiavola/fettaPizza-Diavola.webp" class="img-fluid rounded mt-3" alt="Fetta di pizza diavola">
                     </div>
                 </div>
-                <div class="mt-4 p-3 bg-light rounded">
-                    <h5>Ricetta Classica (per 1 pizza):</h5>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li>• 400g di impasto</li>
-                                <li>• 150g di passata di pomodoro</li>
-                                <li>• 200g di mozzarella</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-unstyled">
-                                <li>• 100g di salamino piccante</li>
-                                <li>• Origano q.b.</li>
-                                <li>• Olio extravergine q.b.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-    
-                <p class="mt-4 text-center">
-                    <strong>Vieni ad assaggiare il prodotto del nostro lavoro artigianale!</strong><br>
-                    <button type="button" class="btn btn-danger btn-lg mt-2">
-                        <a href="#ordina" class="text-white text-decoration-none">
-                            <i class="fas fa-cart-plus me-2"></i>ORDINA ORA
-                        </a>
-                    </button>
-                </p>
-
-            </span>
-
-            
-        </section>
-        <!-- CURIOSITÀ -->
-        <section id="curiosità">
-            <h2>CURIOSITÀ sulla Diavola</h2>
-            <p><strong>Storia:</strong> La Pizza Diavola nasce negli anni '60 come variante piccante della Margherita. Il nome deriva dal colore rosso del salame che ricorda le fiamme "infernali".</p>
-            
-            <p><strong>Nel Mondo:</strong> Conosciuta come "Pepperoni Pizza", è la seconda pizza più ordinata al mondo dopo la Margherita.</p>
-        
-            <p><strong>Il Piccante:</strong> La capsaicina del salame stimola il rilascio di endorfine, creando benessere naturale.</p>
-            
-            <p><strong>Benefici:</strong> Il peperoncino accelera il metabolismo e ha proprietà antiossidanti. Una pizza piccante brucia fino a 50 calorie in più!</p>
-            <button type="button" class="btn btn-outline-light"><a href="#ordina" class="">CURIOSITÀ</a></button>.
-        </section>
-        <!-- PREPARA E NOSTRE PIZZE -->
-        <section id="prepara-pizze">
-            <h2>PREPARA E NOSTRE PIZZE</h2>
-            <p>
-                Porta tutta la famiglia nella nostra pizzeria per imparare l'arte della pizza autentica!<br>
-                I nostri maestri pizzaioli ti insegneranno tutti i trucchi per preparare la pizza perfetta a casa.
+            </div>
+            <p class="mt-4 text-center">
+                <strong>Vieni ad assaggiare il prodotto del nostro lavoro artigianale!</strong><br>
+                <button type="button" class="btn btn-danger btn-lg mt-2">
+                    <a href="../pages/ordina.html" class="text-white text-decoration-none">
+                        <i class="fas fa-cart-plus me-2"></i>ORDINA ORA
+                    </a>
+                </button>
             </p>
-            <button type="button" class="btn btn-outline-light"><a href="#ordina" class="">PREPARA E NOSTRE PIZZE</a></button>.
+        </section>
+
+        <!-- CURIOSITÀ -->
+        <section id="curiosita" class="py-5 bg-light d-flex"> 
+            <div class="container"> 
+                <h3 class="text-center mb-5 display-5 fw-bold text-dark">
+                    <i class="fas fa-question-circle text-danger me-3"></i>CURIOSITÀ SULLA DIAVOLA
+                </h3> 
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 bg-white">
+                            <div class="card-body text-center">
+                                <i class="fas fa-history fa-3x text-danger mb-3"></i> <h5 class="card-title fw-bold text-dark">La Nascita Piccante</h5>
+                                <p class="card-text text-muted">La Pizza Diavola è nata negli anni '60, evoluzione della Margherita. Il suo nome evoca le fiamme "infernali" del salamino.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 bg-white">
+                            <div class="card-body text-center">
+                                <i class="fas fa-globe-americas fa-3x text-danger mb-3"></i> <h5 class="card-title fw-bold text-dark">Fama Globale</h5>
+                                <p class="card-text text-muted">Conosciuta anche come "Pepperoni Pizza" in altre parti del mondo, è la seconda pizza più ordinata dopo la Margherita.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 bg-white">
+                            <div class="card-body text-center">
+                                <i class="fas fa-hot-pepper fa-3x text-danger mb-3"></i> <h5 class="card-title fw-bold text-dark">Il Segreto del Piacere</h5>
+                                <p class="card-text text-muted">La capsaicina del salame piccante stimola il rilascio di endorfine, donando un naturale senso di benessere.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 p-4 bg-white">
+                            <div class="card-body text-center">
+                                <i class="fas fa-fire-alt fa-3x text-danger mb-3"></i> <h5 class="card-title fw-bold text-dark">Piccante e Benefico</h5>
+                                <p class="card-text text-muted">Il peperoncino accelera il metabolismo e vanta proprietà antiossidanti. Si dice che una pizza piccante possa bruciare fino a 50 calorie extra!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="../pages/pizza2.html#ingredienti" class="btn btn-outline-danger btn-lg rounded-pill px-4">
+                        <i class="fas fa-pizza-slice me-2"></i>Scopri gli ingredienti sulla nostra pizza!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREPARA E NOSTRE PIZZE -->
+        <section id="prepara-pizze" class="py-5 bg-dark text-white"> 
+            <div class="container text-center">
+                <h3 class="mb-4 display-5 fw-bold">
+                    <i class="fas fa-hands-helping me-3 text-warning"></i>IMPARA L'ARTE DELLA PIZZA!
+                </h3> 
+                <p class="lead mb-4">
+                    Porta tutta la famiglia nella nostra pizzeria e scopri i segreti per preparare la pizza autentica!
+                    <br>I nostri maestri pizzaioli condivideranno con te tutti i trucchi per una pizza perfetta.
+                </p>
+                <a href="#contatti" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold disabled">
+                    <i class="fas fa-users me-2"></i>ISCRIVITI AL CORSO!
+                </a>
+            </div>
         </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4 d-flex w-100 container-fluid">
         <div class="container text-center">
             <p>&copy; 2024 Mamma Mia Che Pizza. Tutti i diritti riservati.</p>
             <p>
@@ -195,11 +194,43 @@
             </p>
         </div>
     </footer>
-
-
     <!-- JS - Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const ingredientMarkers = document.querySelectorAll('.ingredient-marker');
+        const ingredientListItems = document.querySelectorAll('.ingredients-list li');
+
+        // Funzione per rimuovere tutti gli highlight
+        function removeHighlights() {
+            ingredientMarkers.forEach(marker => marker.classList.remove('highlight-ingredient'));
+            ingredientListItems.forEach(item => item.classList.remove('highlight-ingredient'));
+        }
+
+        // Al passaggio del mouse sui marker della pizza
+        ingredientMarkers.forEach(marker => {
+            marker.addEventListener('mouseenter', function() {
+                removeHighlights();
+                const dataIngredient = this.dataset.ingredient;
+                this.classList.add('highlight-ingredient');
+                document.querySelector(`.ingredients-list li[data-marker="marker-${dataIngredient}"]`).classList.add('highlight-ingredient');
+            });
+            marker.addEventListener('mouseleave', removeHighlights);
+        });
+
+        // Al passaggio del mouse sugli elementi della lista
+        ingredientListItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    removeHighlights();
+                    const dataMarker = this.dataset.marker;
+                    this.classList.add('highlight-ingredient');
+                    document.querySelector(`.ingredient-marker.${dataMarker}`).classList.add('highlight-ingredient');
+                });
+                item.addEventListener('mouseleave', removeHighlights);
+            });
+        });
     </script>
 </body>
 

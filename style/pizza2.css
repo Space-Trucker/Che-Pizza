@@ -6,45 +6,58 @@
     /* --colr-Giallo-Grana */
     /* --colr-Arancione-Crosta */
     /* --colr-Scuro-Oliva */
-    
-    
+
     /* fonts */
     --font-titoli: 'Pacifico', cursive;
     --font-tutto-altro: 'Raleway', sans-serif;
+    /* fonts settings */
+    --font-sz-01p5-10: 1.5vw;
+    --font-sz-02p5-10: 2.5vw;
+    --font-sz-05-10: 5vw;
+    --font-sz-1-10: 10vw;
+    --font-sz-1p5-10: 15vw;
 
     /* for border */
     --border-dashed-mozzarella: 7.5px dashed var(--colr-Bianco-Mozzarella);
+    --border-rds-20: 20px;
 }
 
 body{
     font-family: var(--font-tutto-altro);
     background-image: url("../image/Forno/fornoLegn-pizza.webp") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     button{
         color: var(--colr-Scuro-Oliva) !important;
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
     }
 }
 p{
     margin-block: 1rem;
     margin-block: 1lh;
 }
-/* .btn{
-    border-color: var(--colr-Bianco-Mozzarella) !important;
-    color: var(--colr-Bianco-Mozzarella);
-} */
 
 /* Header */
 #header-Pizza-Diavola{
     width: 100vw;
     height: 100vh;
-    nav, main, footer{ 
+    
+    nav, main{ 
         border:  var(--border-dashed-mozzarella);
-        border-radius: 20px;
+        border-radius: var(--border-rds-20);
     }
     nav{
-        top: 15px;
+        margin-top: 1vw;
         background-color: var(--colr-Verde-Basilico);
         *{
             color: var(--colr-Scuro-Oliva) !important;
+        }
+        .navbar-brand{
+            font-family: var(--font-titoli);
         }
         li:first{
             font-size: 10px;
@@ -60,30 +73,125 @@ p{
         }
     }
     main{
+        height: 45dvh;
         /* per Blur sfondo */
         background-color: color-mix(in srgb, var(--colr-Giallo-Grana) 35%, transparent 40%);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(5px);
-        p{
-            font-size: 14px;
+        h4{
+            color: var(--colr-Arancione-Crosta);
+            text-shadow:
+                /* Ombre a 1px in tutte le direzioni principali */
+                1px 1px 0 var(--colr-Scuro-Oliva),
+                1px -1px 0 var(--colr-Scuro-Oliva),
+                -1px 1px 0 var(--colr-Scuro-Oliva),
+                -1px -1px 0 var(--colr-Scuro-Oliva),
+                /* Ombre a 2px in tutte le direzioni principali */
+                2px 2px 0 var(--colr-Scuro-Oliva),
+                2px -2px 0 var(--colr-Scuro-Oliva),
+                -2px 2px 0 var(--colr-Scuro-Oliva),
+                -2px -2px 0 var(--colr-Scuro-Oliva),
+                /* offset */
+                2px 0 0 var(--colr-Scuro-Oliva),
+                -2px 0 0 var(--colr-Scuro-Oliva),
+                0 2px 0 var(--colr-Scuro-Oliva),
+                0 -2px 0 var(--colr-Scuro-Oliva);
+        }
+        button{
+            height: 6vh;
+            background-color: var(--colr-Verde-Basilico);
+            font-family: var(--font-tutto-altro);
+            border: .3vw dotted var(--colr-Arancione-Crosta);
+            font-size: var(--font-sz-01p5-10);
+            a{color: var(--colr-Bianco-Mozzarella);}
+        }
+        button:hover{
+            background-color: var(--colr-Bianco-Mozzarella);
+            border: .3vw dotted var(--colr-Verde-Basilico);
+            a{color: var(--colr-Arancione-Crosta);}
         }
     }
-    footer{
-        margin-top: 20px;
-    }
 }
-
 h1 {
     font-family: var(--font-titoli);
-    font-size: 8rem;
+    font-size: var(--font-sz-1-10);
+    /* font-size: var(--font-sz-1p5-10); */
+    overflow: hidden; 
+    text-overflow: ellipsis;
     color: var(--colr-Rosso-Pomodoro);
-    text-shadow: 6px 6px 6px var(--colr-Bianco-Mozzarella);
-    /* margin-bottom: 1rem; */
+    text-shadow: 0 0 1vw var(--colr-Bianco-Mozzarella);
+}
+
+h2{
+    font-family: var(--font-tutto-altro);
+    font-size: var(--font-sz-02p5-10);
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 /* Main */
 #main-Pizza-Diavola{
+    padding: 0;
     border:  10px;
     border-style: dashed;
     border-color: var(--colr-Verde-Basilico);
     background-color: color-mix(in srgb, var(--colr-Bianco-Mozzarella), transparent 67.5%);
+
+    #ingredienti{
+
+        /* Stile per il contenitore della pizza */
+        .pizza-fetta-container {
+            position: relative; 
+            padding-bottom: 75%; 
+            height: 0;
+            overflow: hidden; /* Nasconde testo che va fuori */
+        }
+
+        .pizza-fetta-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+        }
+
+        /* Stile base per i marker */
+        .ingredient-marker {
+            position: absolute;
+            background-color: var(--colr-Verde-Basilico); /* Colore Verde per dare contrasto con il rosso */
+            color: white;
+            font-weight: bold;
+            border-radius: 50%; /* Per renderli tondi */
+            width: 30px; /* Dimensione del marker */
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            z-index: 10; /* Per essere sopra l'immagine */
+            box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Piccola ombra per farli risaltare */
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        .ingredient-marker:hover,
+        .ingredients-list li:hover {
+            transform: scale(1.2); /* Inggrandisce leggermente al passaggio del mouse */
+            background-color: var(--colr-Giallo-Grana); /* Cambia colore al passaggio del mouse (giallo/warning) */
+        }
+
+        /* Posizioni marcatori sulla fetta */
+        .marker-1 { top: 10%; left: 30%; } /* 0 Impasto */
+        .marker-2 { top: 50%; left: 50%; } /* 1 Pomodoro */
+        .marker-3 { top: 40%; left: 65%; } /* 2 Mozzarella */
+        .marker-4 { top: 20%; left: 50%; } /* 3 Salamino */
+        .marker-5 { top: 10%; left: 80%; } /* 4 Origano */
+
+        /* Stile per evidenziare */
+        .highlight-ingredient {
+            background-color: var(--colr-Giallo-Grana) !important; /* Giallo brillante per evidenziare */
+            color: var(--colr-Scuro-Oliva) !important;
+            transform: scale(1.1);
+        }
+    }
 }
