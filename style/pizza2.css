@@ -1,11 +1,13 @@
 @import url(styles.css);
 :root{
-    /* --colr-Verde-Basilico */
-    /* --colr-Bianco-Mozzarella */
-    /* --colr-Rosso-Pomodoro */
-    /* --colr-Giallo-Grana */
-    /* --colr-Arancione-Crosta */
-    /* --colr-Scuro-Oliva */
+    /* 
+    --colr-Verde-Basilico 
+    --colr-Bianco-Mozzarella 
+    --colr-Rosso-Pomodoro 
+    --colr-Giallo-Grana 
+    --colr-Arancione-Crosta 
+    --colr-Scuro-Oliva 
+    */
 
     /* fonts */
     --font-titoli: 'Pacifico', cursive;
@@ -115,7 +117,6 @@ p{
 h1 {
     font-family: var(--font-titoli);
     font-size: var(--font-sz-1-10);
-    /* font-size: var(--font-sz-1p5-10); */
     overflow: hidden; 
     text-overflow: ellipsis;
     color: var(--colr-Rosso-Pomodoro);
@@ -137,7 +138,9 @@ h2{
     background-color: color-mix(in srgb, var(--colr-Bianco-Mozzarella), transparent 67.5%);
 
     #ingredienti{
-
+        /* .container>.text-success{
+            color: var(--colr-Verde-Basilico)
+        } */
         /* Stile per il contenitore della pizza */
         .pizza-fetta-container {
             position: relative; 
@@ -159,7 +162,7 @@ h2{
         .ingredient-marker {
             position: absolute;
             background-color: var(--colr-Verde-Basilico); /* Colore Verde per dare contrasto con il rosso */
-            color: white;
+            color: var(--colr-Bianco-Mozzarella);
             font-weight: bold;
             border-radius: 50%; /* Per renderli tondi */
             width: 30px; /* Dimensione del marker */
@@ -176,16 +179,16 @@ h2{
 
         .ingredient-marker:hover,
         .ingredients-list li:hover {
-            transform: scale(1.2); /* Inggrandisce leggermente al passaggio del mouse */
+            transform: scale(1.075); /* Inggrandisce leggermente al passaggio del mouse */
             background-color: var(--colr-Giallo-Grana); /* Cambia colore al passaggio del mouse (giallo/warning) */
         }
 
         /* Posizioni marcatori sulla fetta */
-        .marker-1 { top: 10%; left: 30%; } /* 0 Impasto */
-        .marker-2 { top: 50%; left: 50%; } /* 1 Pomodoro */
-        .marker-3 { top: 40%; left: 65%; } /* 2 Mozzarella */
-        .marker-4 { top: 20%; left: 50%; } /* 3 Salamino */
-        .marker-5 { top: 10%; left: 80%; } /* 4 Origano */
+        .marker-0 { top: 2%; left: 25%; } /* 0 Impasto */
+        .marker-1 { top: 5%; left: 50%; } /* 1 Pomodoro */
+        .marker-2 { top: 40%; left: 65%; } /* 2 Mozzarella */
+        .marker-3 { top: 50%; left: 45%; } /* 3 Salamino */
+        .marker-4 { top: 90%; left: 50%; } /* 4 Origano */
 
         /* Stile per evidenziare */
         .highlight-ingredient {
