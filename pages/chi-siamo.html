@@ -77,49 +77,129 @@
             color: rgba(255, 255, 255, 0.6);
         }
         
-        /* Stile per le card dei membri del team */
+        /* Stile per la sezione hero */
+        .hero-section {
+            background-color: rgba(29, 53, 87, 0.8);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        /* Stile card del team */
         .team-card {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.18);
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             margin-bottom: 2rem;
             height: 100%;
+            border: none;
+            position: relative;
         }
         
         .team-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .team-img-container {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.05);
         }
         
         .team-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
+            
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit:contain ;
+            transition: transform 0.5s ease;
+            margin: 0 auto;
+        }
+        
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+        
+        .team-card-body {
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: var(--primary-color);
+        }
+        
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .team-social {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-social a {
+            color: var(--dark-color);
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
         }
         
         /* Stile per la sezione "Il nostro progetto" */
         .project-section {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.78);
             border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tech-badge {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            border-radius: 50px;
+            background-color: var(--light-color);
+            color: var(--dark-color);
         }
         
         /* Stile per il footer */
         footer {
             background-color: var(--dark-color);
             color: rgb(255, 255, 255);
-            padding: 2rem 0;
+            padding: 3rem 0;
             margin-top: auto;
         }
         
         .social-icons a {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin: 0 0.5rem;
             transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .social-icons a:hover {
@@ -129,12 +209,20 @@
         
         /* Responsive design */
         @media (max-width: 768px) {
-            .team-img {
+            .team-img-container {
                 height: 200px;
             }
             
             .nav-tabs {
                 flex-direction: column;
+            }
+            
+            .project-section {
+                padding: 2rem;
+            }
+            
+            .hero-section {
+                padding: 3rem 0;
             }
         }
     </style>
@@ -172,27 +260,40 @@
 
     <!-- Contenuto Principale -->
     <div class="content-wrapper">
+        <!-- Sezione Hero -->
+        <section class="hero-section text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Chi Siamo</h1>
+                <p class="lead mb-4">Siamo studenti di informatica della 3Ias</p>
+                <p class="mb-0">Istituto Superiore Paleocapa - Bergamo</p>
+            </div>
+        </section>
+        
         <main class="container my-5">
-            <!-- Sezione introduttiva -->
-            <section class="text-center mb-5">
-                <h1 class="display-4 mb-4">Chi Siamo</h1>
-                <p class="lead">Siamo tre studenti appassionati di informatica e web development dell'Istituto Paleocapa di Bergamo</p>
-            </section>
-            
             <!-- Sezione "Il nostro team" -->
-            <section class="mb-5">
-                <h2 class="text-center mb-5">Il Nostro Team</h2>
+            <section class="project-section">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 mb-3">Il Nostro Team</h2>
+                    <p class="lead text-muted">Il gruppo che ha realizzato questo progetto</p>
+                </div>
+                
                 <div class="row">
                     <!-- Card David -->
                     <div class="col-md-4 mb-4">
                         <div class="team-card">
-                            <img src="../image/perfil/images2.jpg" alt="Studente 1" class="team-img">
-                            <div class="p-4">
-                                <h3 class="text-center">David Vaca </h3>
-                                <p class="text-muted text-center">Responsabile Design Front-end</p>
-                                <p>Mi sono occupato principalmente della struttura HTML e del design CSS, Bozze e progettazione del sito e della pagina "Pizza diavola", con particolare attenzione alla user experience e alla responsive design.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-envelope me-2"></i>Contattami</a>
+                            <div class="team-img-container">
+                                <img src="../image/perfil/images3.jpg" alt="David Vaca" class="team-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h3 class="text-center mb-1">David Vaca</h3>
+                                <span class="team-role text-center">Responsabile Design Front-end</span>
+                                <p class="text-center">Mi sono occupato principalmente della struttura HTML e del design CSS e menu "Pizza Diavola", con particolare attenzione alla user experience e alla responsive design.</p>
+                                
+                                <div class="team-social text-center">
+                                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -201,13 +302,19 @@
                     <!-- Card Jairo -->
                     <div class="col-md-4 mb-4">
                         <div class="team-card">
-                            <img src="../image/perfil/images.jpg" alt="Studente 2" class="team-img">
-                            <div class="p-4">
-                                <h3 class="text-center">Jairo  Villca Sanchez</h3>
-                                <p class="text-muted text-center">Project Manager Front-end & Back-end</p>
-                                <p>Ho lavorato alla logica del sito, alla gestione delle pagine del sito: Index, Menu Bismark, ordini, chi siamo e all'interazione con le altri pagine del sito, garantendo che tutto funzioni senza intoppi.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-envelope me-2"></i>Contattami</a>
+                            <div class="team-img-container">
+                                <img src="../image/perfil/images.jpg" alt="Jairo Villca Sanchez" class="team-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h3 class="text-center mb-1">Jairo Villca Sanchez</h3>
+                                <span class="team-role text-center">Project Manager</span>
+                                <p class="text-center">Ho coordinato il team e lavorato nello sviluppo del sito web sulle struttura HTML e del design CSS , gestendo le pagine del sito web, assicurandomi che tutto funzionasse.</p>
+                                
+                                <div class="team-social text-center">
+                                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -216,13 +323,19 @@
                     <!-- Card Kascift -->
                     <div class="col-md-4 mb-4">
                         <div class="team-card">
-                            <img src="../image/perfil/images3.jpg" alt="Studente 3" class="team-img">
-                            <div class="p-4">
-                                <h3 class="text-center">Kascift</h3>
-                                <p class="text-muted text-center">Amministratore di rete & Data Base </p>
-                                <p>Mi sono occupato della creazione dei contenuti testuali, sviluppo della pagina"Pizza Napoletana"  della selezione delle immagini e caricare il sito su internet, per migliorare la visibilità del sito.</p>
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-envelope me-2"></i>Contattami</a>
+                            <div class="team-img-container">
+                                <img src="../image/perfil/images3.jpg" alt="Kasif S." class="team-img">
+                            </div>
+                            <div class="team-card-body">
+                                <h3 class="text-center mb-1">Kascift</h3>
+                                <span class="team-role text-center">Responsabile Back-end & GitHub</span>
+                                <p class="text-center">Ho gestito Github creando un ambiente di lavoro on-line. Mi sono occupato della creazione dei contenuti testuali menu "Pizza Napolitana" e del caricamento del sito su internet.</p>
+                                
+                                <div class="team-social text-center">
+                                    <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -235,29 +348,30 @@
                 <h2 class="text-center mb-4">Il Nostro Progetto</h2>
                 <div class="row">
                     <div class="col-lg-6">
-                        <h3>La nostra storia</h3>
+                        <h3 class="mb-3">La nostra storia</h3>
                         <p>Siamo tre studenti della classe 3 Ias dell'Istituto Superiore Paleocapa di Bergamo. Questo sito web è il nostro primo progetto completo di web development, realizzato come parte del nostro percorso formativo.</p>
-                        <p>Abbiamo scelto di creare un sito per una pizzeria immaginaria per mettere in pratica le competenze acquisite in HTML, CSS, Bootstrap e JavaScript.</p>
+                        <p>Abbiamo scelto di creare un sito per una pizzeria immaginaria per mettere in pratica le competenze acquisite in HTML, CSS e Bootstrap.</p>
+                        
+                        <h3 class="mt-4 mb-3">La nostra missione</h3>
+                        <p>Vogliamo dimostrare come la tecnologia possa migliorare l'esperienza culinaria, creando un sito che sia allo stesso tempo informativo, accattivante e facile da usare.</p>
                     </div>
                     <div class="col-lg-6">
-                        <h3>Obiettivi del progetto</h3>
-                        <ul>
-                            <li>Creare un sito web responsive e accessibile</li>
-                            <li>Implementare un design attraente e funzionale</li>
-                            <li>Apprendere le basi dello sviluppo web front-end</li>
-                            <li>Collaborare come team utilizzando strumenti di version control</li>
-                            <li>Documentare correttamente il nostro lavoro</li>
+                        <h3 class="mb-3">Obiettivi del progetto</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Creare un sito web responsive e accessibile</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Implementare un design attraente e funzionale</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Apprendere le basi dello sviluppo web front-end</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Collaborare come team utilizzando strumenti di version control</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Documentare correttamente il nostro lavoro</li>
                         </ul>
-                    </div>
-                </div>
-                
-                <div class="mt-4">
-                    <h3>Tecnologie utilizzate</h3>
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-                        <span class="badge bg-primary p-2"><i class="fab fa-html5 me-2"></i>HTML5</span>
-                        <span class="badge bg-primary p-2"><i class="fab fa-css3-alt me-2"></i>CSS3</span>
-                        <span class="badge bg-primary p-2"><i class="fab fa-bootstrap me-2"></i>Bootstrap 5</span>
-                        <span class="badge bg-primary p-2"><i class="fab fa-github me-2"></i>GitHub</span>
+                        
+                        <h3 class="mt-4 mb-3">Tecnologie utilizzate</h3>
+                        <div class="d-flex flex-wrap">
+                            <span class="tech-badge"><i class="fab fa-html5 me-2"></i>HTML5</span>
+                            <span class="tech-badge"><i class="fab fa-css3-alt me-2"></i>CSS3</span>
+                            <span class="tech-badge"><i class="fab fa-bootstrap me-2"></i>Bootstrap 5</span>
+                            <span class="tech-badge"><i class="fab fa-github me-2"></i>GitHub</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -266,78 +380,77 @@
             <section class="project-section">
                 <h2 class="text-center mb-4">La Nostra Scuola</h2>
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="../image/Scuola.jpg" alt="Istituto Paleocapa" class="img-fluid rounded">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="../image/Scuola.jpg" alt="Istituto Paleocapa" class="img-fluid rounded shadow">
                     </div>
                     <div class="col-md-6">
                         <h3>Istituto Superiore Paleocapa - Bergamo</h3>
                         <p>L'Istituto Paleocapa è una scuola secondaria di secondo grado che offre diversi indirizzi di studio, tra cui l'Informatica e Telecomunicazioni, il nostro corso di studi.</p>
                         <p>La scuola è nota per la sua attenzione alle nuove tecnologie e per preparare gli studenti al mondo del lavoro con competenze pratiche e teoriche.</p>
-                        <a href="https://www.paleocapa.edu.it" target="_blank" class="btn btn-outline-primary">Visita il sito della scuola</a>
+                        <a href="https://www.itispaleocapa.edu.it" target="_blank" class="btn btn-primary mt-3">
+                            <i class="fas fa-external-link-alt me-2"></i>Visita il sito della scuola
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-  <!-- Footer della pagina -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <!-- Sezione informazioni -->
-                    <div class="col-md-4 mb-4">
-                        <h5><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</h5>
-                        <p>La vera pizza italiana dal 1985. Tradizione, qualità e passione in ogni pizza.</p>
-                        <div class="social-icons">
-                            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Sezione orari e contatti -->
-                    <div class="col-md-4 mb-4">
-                        <h5>Orari di Apertura</h5>
-                        <ul class="list-unstyled">
-                            <li>Lun-Ven: 11:00 - 23:00</li>
-                            <li>Sab-Dom: 11:00 - 24:00</li>
-                        </ul>
-                        <h5 class="mt-3">Contatti</h5>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Via Europa, 123 - Bergamo</p>
-                        <p><i class="fas fa-phone me-2"></i>+39 123 456789</p>
-                        <p><i class="fas fa-envelope me-2"></i>info@chepizza.it</p>
-                    </div>
-
-                    <!-- Sezione newsletter e link legali -->
-                    <div class="col-md-4 mb-4">
-                        <h5>Newsletter</h5>
-                        <p>Iscriviti per ricevere offerte speciali e novità!</p>
-                        <form>
-                            <div class="input-group mb-3">
-                                <input type="email" class="form-control" placeholder="La tua email" required>
-                                <button class="btn btn-primary" type="submit">Iscriviti</button>
-                            </div>
-                        </form>
-                        <div class="mt-3">
-                            <a href="/pages/privacy.html" class="text-white me-3">Privacy Policy</a>
-                            <a href="/pages/termini.html" class="text-white">Termini e Condizioni</a>
-                        </div>
+    <!-- Footer della pagina -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Sezione informazioni -->
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-pizza-slice me-2"></i>Mamma Mia Che Pizza</h5>
+                    <p>La vera pizza italiana dal 1985. Tradizione, qualità e passione in ogni pizza.</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
-                <hr class="my-4 bg-light">
-                <div class="text-center">
-                    <p class="mb-0">&copy; 2025 Mamma Mia Che Pizza. Proggeto realizado da studenti 3ias. Tutti i
-                        diritti riservati.</p>
+
+                <!-- Sezione orari e contatti -->
+                <div class="col-md-4 mb-4">
+                    <h5>Orari di Apertura</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="far fa-clock me-2"></i>Lun-Ven: 11:00 - 23:00</li>
+                        <li><i class="far fa-clock me-2"></i>Sab-Dom: 11:00 - 24:00</li>
+                    </ul>
+                    <h5 class="mt-3">Contatti</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Via Europa, 123 - Bergamo</p>
+                    <p><i class="fas fa-phone me-2"></i>+39 123 456789</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@chepizza.it</p>
+                </div>
+
+                <!-- Sezione newsletter e link legali -->
+                <div class="col-md-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Iscriviti per ricevere offerte speciali e novità!</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="La tua email" required>
+                            <button class="btn btn-primary" type="submit">Iscriviti</button>
+                        </div>
+                    </form>
+                    <div class="mt-3">
+                        <a href="/pages/privacy.html" class="text-white me-3">Privacy Policy</a>
+                        <a href="/pages/termini.html" class="text-white">Termini e Condizioni</a>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Mamma Mia Che Pizza. Progetto realizzato da studenti 3ias. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
