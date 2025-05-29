@@ -80,19 +80,31 @@ p{
         background-color: color-mix(in srgb, var(--colr-Giallo-Grana) 35%, transparent 40%);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(5px);
-        
+
         button{
-            height: 6vh;
+            height: clamp(4rem, 5%, 2vh);
             background-color: var(--colr-Verde-Basilico);
             font-family: var(--font-tutto-altro);
             border: .3vw dotted var(--colr-Arancione-Crosta);
-            font-size: var(--font-sz-01p5-10);
+            font-size: clamp(var(--font-sz-01p5-10), --font-sz-02p5-10, --font-sz-05-10);
             a{color: var(--colr-Bianco-Mozzarella);}
         }
         button:hover{
             background-color: var(--colr-Bianco-Mozzarella);
             border: .3vw dotted var(--colr-Verde-Basilico);
             a{color: var(--colr-Arancione-Crosta);}
+        }
+        /* Primo Bottone per Tipo   */
+        #tags-Piatto>button:first-of-type{
+            background-color: var(--colr-Scuro-Oliva);
+            font-family: var(--font-tutto-altro);
+            border: .3vw dotted var(--colr-Bianco-Mozzarella);
+            a{color: var(--colr-Bianco-Mozzarella);}
+        }
+        #tags-Piatto>button:first-of-type:hover{
+            background-color: var(--colr-Arancione-Crosta);
+            border: .3vw dotted var(--colr-Scuro-Oliva);
+            a{color: var(--colr-Verde-Basilico);}
         }
     }
 }
